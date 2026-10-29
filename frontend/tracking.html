@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order | GramCraft</title>
+
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #faf7f0;
+        color: #382718;
+        min-height: 100vh;
+    }
+
+    header {
+        background: #fffdf8;
+        padding: 20px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eadfcf;
+    }
+
+    .brand {
+        font-size: 27px;
+        font-weight: bold;
+        color: #567044;
+        text-decoration: none;
+    }
+
+    .back-link {
+        color: #567044;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    main {
+        max-width: 850px;
+        margin: 55px auto;
+        padding: 0 20px;
+    }
+
+    .heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .eyebrow {
+        color: #8a6a3d;
+        font-size: 12px;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: clamp(30px, 5vw, 43px);
+        margin: 12px 0;
+    }
+
+    .heading p {
+        color: #786d60;
+        line-height: 1.7;
+    }
+
+    .tracking-form,
+    .tracking-result {
+        background: #fffdf8;
+        border: 1px solid #eadfcf;
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 8px 30px rgba(65, 45, 20, 0.05);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .input-row {
+        display: flex;
+        gap: 12px;
+    }
+
+    input {
+        flex: 1;
+        min-width: 0;
+        padding: 14px;
+        border: 1px solid #d8cbb8;
+        border-radius: 9px;
+        font-size: 15px;
+        outline-color: #78915e;
+    }
+
+    button {
+        padding: 14px 22px;
+        background: #567044;
+        color: white;
+        border: none;
+        border-radius: 9px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #405733;
+    }
+
+    #trackingMessage {
+        margin-top: 15px;
+        line-height: 1.6;
+        color: #8a442e;
+    }
+
+    .tracking-result {
+        margin-top: 25px;
+    }
+
+    .tracking-result h2 {
+        margin-bottom: 18px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .status-badge {
+        display: inline-block;
+        background: #e6efdc;
+        color: #405733;
+        padding: 8px 13px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .order-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .info-box {
+        padding: 15px;
+        background: #f8f3e9;
+        border-radius: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .info-box span {
+        display: block;
+        color: #786d60;
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+
+    .info-box strong {
+        line-height: 1.5;
+    }
+
+    .tracking-history {
+        margin-top: 28px;
+    }
+
+    .tracking-history h3 {
+        margin-bottom: 18px;
+    }
+
+    .tracking-entry {
+        border-left: 3px solid #78915e;
+        padding: 3px 0 20px 17px;
+        margin-left: 5px;
+    }
+
+    .tracking-entry p {
+        margin-top: 7px;
+        color: #786d60;
+        line-height: 1.6;
+    }
+
+    footer {
+        text-align: center;
+        color: #8b8174;
+        padding: 30px 15px;
+        font-size: 13px;
+    }
+
+    @media (max-width: 520px) {
+        header {
+            padding: 18px;
+        }
+
+        .brand {
+            font-size: 23px;
+        }
+
+        main {
+            margin-top: 35px;
+        }
+
+        .tracking-form,
+        .tracking-result {
+            padding: 20px;
+        }
+
+        .input-row {
+            flex-direction: column;
+        }
+
+        .input-row button {
+            width: 100%;
+        }
+
+        .order-info {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="brand">GramCraft</a>
+
+```
+<a href="index.html" class="back-link" id="backLink">
+    ← Marketplace
+</a>
+
+<label for="languageSelect" id="languageLabel">Language:</label>
+
+<select id="languageSelect" aria-label="Choose language">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+    <option value="mr">मराठी</option>
+</select>
+
+
+</header>
+
+
+<main>
+    <section class="heading">
+    <span class="eyebrow" id="trackingEyebrow">
+        YOUR ORDER, YOUR PEACE OF MIND
+    </span>
+
+    <h1 id="trackingTitle">Track Your Order</h1>
+
+    <p id="trackingIntro">
+        Enter your order number to check your order status<br>
+        and view the latest tracking updates.
+    </p>
+</section>
+
+    <section class="tracking-form">
+        <form id="trackingForm">
+            <label for="orderNumber" id="orderNumberLabel">Order Number</label>
+
+            <div class="input-row">
+                <input
+                    type="text"
+                    id="orderNumber"
+                    placeholder="Example: GC-F2952D58DD"
+                    required
+                >
+
+                <button type="submit" id="trackButton">
+                    Track Order
+                </button>
+            </div>
+        </form>
+
+        <p id="trackingMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="trackingResult" class="tracking-result hidden">
+        <h2 id="orderDetailsTitle">Order Details</h2>
+
+        <span id="orderStatus" class="status-badge"></span>
+
+        <div class="order-info">
+            <div class="info-box">
+                <span id="resultOrderNumberLabel">Order Number</span>
+                <strong id="resultOrderNumber"></strong>
+            </div>
+
+            <div class="info-box">
+                <span id="orderDateLabel">Order Date</span>
+                <strong id="resultOrderDate"></strong>
+            </div>
+
+            <div class="info-box">
+                <span id="productsLabel">Products</span>
+                <strong id="resultProducts"></strong>
+            </div>
+
+            <div class="info-box">
+                <span id="grandTotalLabel">Grand Total</span>
+                <strong id="resultTotal"></strong>
+            </div>
+        </div>
+
+        <div class="tracking-history">
+            <h3 id="trackingHistoryTitle">Tracking History</h3>
+            <div id="trackingTimeline"></div>
+        </div>
+    </section>
+</main>
+
+<footer id="trackingFooter">
+    GramCraft — Supporting local artisans, one order at a time.
+</footer>
+
+
+
+
+<script>
+const trackingForm = document.getElementById("trackingForm");
+const orderNumberInput = document.getElementById("orderNumber");
+const trackButton = document.getElementById("trackButton");
+
+const trackingMessage = document.getElementById("trackingMessage");
+const trackingResult = document.getElementById("trackingResult");
+
+const orderStatus = document.getElementById("orderStatus");
+const resultOrderNumber = document.getElementById("resultOrderNumber");
+const resultOrderDate = document.getElementById("resultOrderDate");
+const resultProducts = document.getElementById("resultProducts");
+const resultTotal = document.getElementById("resultTotal");
+const trackingTimeline = document.getElementById("trackingTimeline");
+
+function formatRupees(amount) {
+    return Number(amount || 0).toLocaleString("en-IN", {
+        style: "currency",
+        currency: "INR",
+        maximumFractionDigits: 2
+    });
+}
+
+function formatDate(dateValue) {
+    const date = new Date(dateValue);
+
+    if (Number.isNaN(date.getTime())) {
+        return trackingTranslations[getTrackingLanguage()].notAvailable;
+    }
+
+    return date.toLocaleString("en-IN", {
+        dateStyle: "medium",
+        timeStyle: "short"
+    });
+}
+
+function formatStatus(status) {
+    return String(status || "Unknown")
+        .replaceAll("_", " ")
+        .replace(/\b\w/g, letter => letter.toUpperCase());
+}
+
+trackingForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const orderNumber = orderNumberInput.value.trim();
+
+    if (!orderNumber) {
+        trackingMessage.textContent = trackingTranslations[getTrackingLanguage()].pleaseEnter;
+        trackingResult.classList.add("hidden");
+        return;
+    }
+
+    trackButton.disabled = true;
+    trackButton.textContent = trackingTranslations[getTrackingLanguage()].searching;
+    trackingMessage.textContent = trackingTranslations[getTrackingLanguage()].looking;
+    trackingResult.classList.add("hidden");
+    trackingTimeline.replaceChildren();
+
+    try {
+        const response = await fetch(
+            "http://localhost:5000/api/orders/" +
+            encodeURIComponent(orderNumber)
+        );
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+            throw new Error(data.message || "Order not found.");
+        }
+
+        const order = data.order;
+        const items = data.items || [];
+        const updates = data.tracking || [];
+
+        orderStatus.textContent = formatStatus(order.order_status);
+        resultOrderNumber.textContent = order.order_number;
+        resultOrderDate.textContent = formatDate(order.created_at);
+
+        resultProducts.textContent = items.length
+            ? items.map(item =>
+                `${item.product_name} × ${item.quantity}`
+            ).join(", ")
+            : trackingTranslations[getTrackingLanguage()].noProducts;
+
+        resultTotal.textContent = formatRupees(order.grand_total);
+
+        if (updates.length === 0) {
+            trackingTimeline.textContent =
+    trackingTranslations[getTrackingLanguage()].noUpdates;
+        } else {
+            // Display tracking events from oldest to newest.
+            [...updates].reverse().forEach(update => {
+                const entry = document.createElement("div");
+                entry.className = "tracking-entry";
+
+                const heading = document.createElement("strong");
+                heading.textContent = formatStatus(update.order_status);
+
+                const description = document.createElement("p");
+                description.textContent =
+                    update.status_message ||
+trackingTranslations[getTrackingLanguage()].statusUpdated;
+
+                const date = document.createElement("p");
+                date.textContent = formatDate(update.created_at);
+
+                entry.append(heading, description, date);
+
+                if (update.location_name) {
+                    const location = document.createElement("p");
+                    location.textContent =
+    trackingTranslations[getTrackingLanguage()].location + " " +
+    update.location_name;
+                    entry.appendChild(location);
+                }
+
+                trackingTimeline.appendChild(entry);
+            });
+        }
+
+        trackingResult.classList.remove("hidden");
+        trackingMessage.textContent = trackingTranslations[getTrackingLanguage()].orderFound;
+
+    } catch (error) {
+        trackingMessage.textContent =
+            error.message || "Could not retrieve your order. Please try again.";
+    } finally {
+        trackButton.disabled = false;
+        trackButton.textContent = trackingTranslations[getTrackingLanguage()].trackButton;
+    }
+});
+</script>
+
+
+<script>
+const trackingTranslations = {
+    en: {
+        language: "Language:",
+        backLink: "← Marketplace",
+        eyebrow: "YOUR ORDER, YOUR PEACE OF MIND",
+        title: "Track Your Order",
+        intro: "Enter your order number to check your order status<br>and view the latest tracking updates.",
+        orderNumber: "Order Number",
+        placeholder: "Example: GC-F2952D58DD",
+        trackButton: "Track Order",
+        searching: "Searching...",
+        orderDetails: "Order Details",
+        orderDate: "Order Date",
+        products: "Products",
+        grandTotal: "Grand Total",
+        trackingHistory: "Tracking History",
+        footer: "GramCraft — Supporting local artisans, one order at a time.",
+        notAvailable: "Not available",
+        noProducts: "No products found.",
+        noUpdates: "No tracking updates yet.",
+        pleaseEnter: "Please enter your order number.",
+        looking: "Looking for your order...",
+        orderFound: "Order found! Here are your order details.",
+        orderNotFound: "Order not found.",
+        couldNotRetrieve: "Could not retrieve your order. Please try again.",
+        statusUpdated: "Status updated.",
+        location: "Location:"
+    },
+
+    hi: {
+        language: "भाषा:",
+        backLink: "← मार्केटप्लेस",
+        eyebrow: "आपके ऑर्डर की पूरी जानकारी",
+        title: "अपना ऑर्डर ट्रैक करें",
+        intro: "अपने ऑर्डर की स्थिति जानने के लिए ऑर्डर नंबर दर्ज करें।<br>नवीनतम ट्रैकिंग अपडेट भी देखें।",
+        orderNumber: "ऑर्डर नंबर",
+        placeholder: "उदाहरण: GC-F2952D58DD",
+        trackButton: "ऑर्डर ट्रैक करें",
+        searching: "खोज रहे हैं...",
+        orderDetails: "ऑर्डर की जानकारी",
+        orderDate: "ऑर्डर की तारीख",
+        products: "प्रोडक्ट्स",
+        grandTotal: "कुल राशि",
+        trackingHistory: "ट्रैकिंग इतिहास",
+        footer: "GramCraft — स्थानीय कारीगरों का समर्थन, हर ऑर्डर के साथ।",
+        notAvailable: "उपलब्ध नहीं",
+        noProducts: "कोई प्रोडक्ट नहीं मिला।",
+        noUpdates: "अभी तक कोई ट्रैकिंग अपडेट नहीं है।",
+        pleaseEnter: "कृपया अपना ऑर्डर नंबर दर्ज करें।",
+        looking: "आपका ऑर्डर खोज रहे हैं...",
+        orderFound: "ऑर्डर मिल गया! आपके ऑर्डर की जानकारी यहाँ है।",
+        orderNotFound: "ऑर्डर नहीं मिला।",
+        couldNotRetrieve: "ऑर्डर की जानकारी नहीं मिल सकी। कृपया फिर कोशिश करें।",
+        statusUpdated: "स्थिति अपडेट की गई।",
+        location: "स्थान:"
+    },
+
+    mr: {
+        language: "भाषा:",
+        backLink: "← मार्केटप्लेस",
+        eyebrow: "तुमच्या ऑर्डरची संपूर्ण माहिती",
+        title: "तुमची ऑर्डर ट्रॅक करा",
+        intro: "ऑर्डरची स्थिती तपासण्यासाठी तुमचा ऑर्डर नंबर टाका.<br>नवीनतम ट्रॅकिंग अपडेट्स देखील पहा.",
+        orderNumber: "ऑर्डर नंबर",
+        placeholder: "उदाहरण: GC-F2952D58DD",
+        trackButton: "ऑर्डर ट्रॅक करा",
+        searching: "शोधत आहे...",
+        orderDetails: "ऑर्डरची माहिती",
+        orderDate: "ऑर्डरची तारीख",
+        products: "उत्पादने",
+        grandTotal: "एकूण रक्कम",
+        trackingHistory: "ट्रॅकिंग इतिहास",
+        footer: "GramCraft — प्रत्येक ऑर्डरमधून स्थानिक कारागिरांना पाठिंबा.",
+        notAvailable: "उपलब्ध नाही",
+        noProducts: "कोणतीही उत्पादने आढळली नाहीत.",
+        noUpdates: "अद्याप ट्रॅकिंग अपडेट्स नाहीत.",
+        pleaseEnter: "कृपया तुमचा ऑर्डर नंबर टाका.",
+        looking: "तुमची ऑर्डर शोधत आहे...",
+        orderFound: "ऑर्डर सापडली! तुमच्या ऑर्डरची माहिती येथे आहे.",
+        orderNotFound: "ऑर्डर सापडली नाही.",
+        couldNotRetrieve: "ऑर्डरची माहिती मिळाली नाही. कृपया पुन्हा प्रयत्न करा.",
+        statusUpdated: "स्थिती अपडेट केली.",
+        location: "ठिकाण:"
+    }
+};
+
+const trackingLanguageSelect = document.getElementById("languageSelect");
+
+function getTrackingLanguage() {
+    const savedLanguage = localStorage.getItem("gramCraftLanguage");
+    return trackingTranslations[savedLanguage] ? savedLanguage : "en";
+}
+
+function applyTrackingLanguage(language) {
+    const t = trackingTranslations[language] || trackingTranslations.en;
+
+    document.documentElement.lang = language;
+
+    document.getElementById("languageLabel").textContent = t.language;
+    document.getElementById("backLink").textContent = t.backLink;
+    document.getElementById("trackingEyebrow").textContent = t.eyebrow;
+    document.getElementById("trackingTitle").textContent = t.title;
+    document.getElementById("trackingIntro").innerHTML = t.intro;
+    document.getElementById("orderNumberLabel").textContent = t.orderNumber;
+    document.getElementById("orderNumber").placeholder = t.placeholder;
+    document.getElementById("trackButton").textContent = t.trackButton;
+    document.getElementById("orderDetailsTitle").textContent = t.orderDetails;
+    document.getElementById("resultOrderNumberLabel").textContent = t.orderNumber;
+    document.getElementById("orderDateLabel").textContent = t.orderDate;
+    document.getElementById("productsLabel").textContent = t.products;
+    document.getElementById("grandTotalLabel").textContent = t.grandTotal;
+    document.getElementById("trackingHistoryTitle").textContent = t.trackingHistory;
+    document.getElementById("trackingFooter").textContent = t.footer;
+
+    localStorage.setItem("gramCraftLanguage", language);
+}
+
+trackingLanguageSelect.value = getTrackingLanguage();
+applyTrackingLanguage(trackingLanguageSelect.value);
+
+trackingLanguageSelect.addEventListener("change", function () {
+    applyTrackingLanguage(this.value);
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#FFF5E5">
+
+    <title>Gram Setu| Gaon Se Bazaar Tak</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a href="#home" class="brand" aria-label="GramCraft home">
+                <div class="brand-icon" aria-hidden="true">🌱</div>
+
+                <div>
+                    <div class="brand-name">GramCraft</div>
+                    <div class="brand-tagline" data-i18n="tagline">
+                        Gaon Se Bazaar Tak
+                    </div>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#home" data-i18n="home">Home</a>
+                <a href="#marketplace" data-i18n="marketplace">Marketplace</a>
+                <a href="#journey" data-i18n="logistics">Logistics</a>
+                <a href="#about" data-i18n="about">About Us</a>
+                <a href="#help" data-i18n="help">Help</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <label for="languageSelect" hidden>Choose language</label>
+
+                <select class="language-select" id="languageSelect" aria-label="Choose language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+
+                <button class="icon-button" id="audioButton" aria-label="Listen to welcome message" title="Audio help">
+                    ♬
+                </button>
+
+                <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation menu"
+                    aria-expanded="false" aria-controls="navLinks">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- VILLAGE WELCOME -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-background" aria-hidden="true"></div>
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow" data-i18n="eyebrow">
+                        🌾 Made in our villages, shared with the world
+                    </div>
+
+                    <h1 data-i18n="heroTitle">
+                        Handmade Dreams,<br>
+                        <span>Bigger Markets.</span>
+                    </h1>
+
+                    <p class="hero-description" data-i18n="heroDescription">
+                        GramCraft connects rural artisans with customers,
+                        helping handmade products reach new homes and
+                        creating opportunities for village communities.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#marketplace" class="btn btn-primary" data-i18n="getStarted">
+                            Let's Get Started <span aria-hidden="true">→</span>
+                        </a>
+
+                        <button class="btn btn-secondary" id="storyButton">
+                            <span aria-hidden="true">▷</span>
+                            <span data-i18n="watchStory">Discover Our Story</span>
+                        </button>
+
+                    </div>
+
+                    <p class="hero-note" data-i18n="heroNote">
+                        Simple to use. Made for everyone.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section class="intro-section" id="marketplace">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow" data-i18n="welcomeEyebrow">
+                        A little help, a world of possibilities
+                    </div>
+
+                    <h2 data-i18n="welcomeTitle">
+                        Your village. Your products. Your journey.
+                    </h2>
+
+                    <p data-i18n="welcomeDescription">
+                        Explore handmade treasures, find transport and
+                        follow your products on their journey to customers.
+                    </p>
+
+                </div>
+
+
+                <div class="features">
+
+                    <!-- PRODUCT CARD -->
+
+                    <article class="feature-card">
+
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80"
+                                alt="Handmade ceramic pottery" loading="lazy">
+                        </div>
+
+                        <div class="feature-content">
+
+                            <div class="feature-icon craft-icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <path d="M12 27H52L47 52H17L12 27Z" fill="#D59F3F" stroke="#5C5011"
+                                        stroke-width="2.5" stroke-linejoin="round" />
+                                    <path d="M19 27C19 10 45 10 45 27" stroke="#8A7424" stroke-width="3"
+                                        stroke-linecap="round" />
+                                    <path d="M21 34L24 46M32 33V47M43 34L40 46" stroke="#FFF1CC" stroke-width="2.5"
+                                        stroke-linecap="round" />
+                                    <path d="M12 27H52" stroke="#421A05" stroke-width="3" stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <h3 data-i18n="productsTitle">
+                                Explore Products
+                            </h3>
+
+                            <p data-i18n="productsDescription">
+                                Discover unique handmade products from
+                                rural artisans.
+                            </p>
+
+                           
+<a href="products.html" class="text-link" data-i18n="exploreLink">
+    Explore <span aria-hidden="true">→</span>
+</a>
+
+
+
+                        </div>
+                    </article>
+
+
+                    <!-- ORDERING CARD -->
+
+                    <article class="feature-card">
+
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
+                                alt="Person using a digital device" loading="lazy">
+                        </div>
+
+                        <div class="feature-content">
+
+                            
+                            <div class="feature-icon craft-icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <!-- Parcel body -->
+                                    <path d="M12 23L32 12L52 23V46L32 57L12 46V23Z" fill="#EBD48F" stroke="#5C5011"
+                                        stroke-width="2.5" stroke-linejoin="round" />
+
+                                    <!-- Parcel top -->
+                                    <path d="M12 23L32 35L52 23" stroke="#8A7424" stroke-width="2.5"
+                                        stroke-linejoin="round" />
+
+                                    <!-- Parcel sides -->
+                                    <path d="M32 35V56" stroke="#8A7424" stroke-width="2.5" />
+
+                                    <!-- Ribbon -->
+                                    <path d="M27 32V18L32 21L37 18V32" fill="#CF6811" stroke="#A43108" stroke-width="2"
+                                        stroke-linejoin="round" />
+
+                                    <!-- Small heart seal -->
+                                    <path d="M32 28C27 24 24 29 32 34C40 29 37 24 32 28Z" fill="#A43108" />
+                                </svg>
+                            </div>
+
+
+                            <h3 data-i18n="orderingTitle">
+                                Easy Ordering
+                            </h3>
+
+                            <p data-i18n="orderingDescription">
+                                Choose what you need with simple,
+                                easy-to-follow steps.
+                            </p>
+
+                            <a href="order.html" class="text-link" data-i18n="orderLink">
+                                Learn how <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- TRANSPORT CARD -->
+
+                    <article class="feature-card">
+
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=700&q=80"
+                                alt="Goods transport truck" loading="lazy">
+                        </div>
+
+                        <div class="feature-content">
+
+
+                            <div class="feature-icon craft-icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none">
+
+                                    <!-- Truck cargo -->
+                                    <path d="M7 15H37V43H7V15Z" fill="#D59F3F" stroke="#5C5011" stroke-width="2.5"
+                                        stroke-linejoin="round" />
+
+                                    <!-- Cargo decoration -->
+                                    <path d="M15 23H29M15 30H29" stroke="#FFF1CC" stroke-width="3"
+                                        stroke-linecap="round" />
+
+                                    <!-- Driver cabin -->
+                                    <path d="M37 25H47L57 36V43H37V25Z" fill="#CF6811" stroke="#5C5011"
+                                        stroke-width="2.5" stroke-linejoin="round" />
+
+                                    <!-- Window -->
+                                    <path d="M41 29H46L51 35H41V29Z" fill="#FFF1CC" stroke="#5C5011" stroke-width="1.5"
+                                        stroke-linejoin="round" />
+
+                                    <!-- Wheels -->
+                                    <circle cx="19" cy="45" r="6" fill="#421A05" stroke="#FFF1CC" stroke-width="2" />
+
+                                    <circle cx="46" cy="45" r="6" fill="#421A05" stroke="#FFF1CC" stroke-width="2" />
+
+                                    <!-- Wheel centres -->
+                                    <circle cx="19" cy="45" r="2" fill="#D59F3F" />
+                                    <circle cx="46" cy="45" r="2" fill="#D59F3F" />
+
+                                </svg>
+                            </div>
+
+
+
+                            <h3 data-i18n="transportTitle">
+                                Safe Transport
+                            </h3>
+
+                            <p data-i18n="transportDescription">
+                                Arrange the journey from the village
+                                to the destination.
+                            </p>
+
+                            <a href="tracking.html" class="text-link" data-i18n="transportLink">
+                                See the journey <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- ARTISAN CARD -->
+
+                    <article class="feature-card" id="about">
+
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80"
+                                alt="Creative handmade work" loading="lazy">
+                        </div>
+
+                        <div class="feature-content">
+
+                            <div class="feature-icon craft-icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none">
+
+                                    <!-- Flower petals -->
+                                    <path d="M32 8C25 8 23 17 32 25C41 17 39 8 32 8Z" fill="#D59F3F" stroke="#8A7424"
+                                        stroke-width="1.8" />
+
+                                    <path d="M56 29C56 22 47 20 39 29C47 38 56 36 56 29Z" fill="#CF6811"
+                                        stroke="#A43108" stroke-width="1.8" />
+
+                                    <path d="M32 51C39 51 41 42 32 34C23 42 25 51 32 51Z" fill="#D59F3F"
+                                        stroke="#8A7424" stroke-width="1.8" />
+
+                                    <path d="M8 29C8 36 17 38 25 29C17 20 8 22 8 29Z" fill="#EBD48F" stroke="#8A7424"
+                                        stroke-width="1.8" />
+
+                                    <!-- Flower centre -->
+                                    <circle cx="32" cy="29" r="8" fill="#A43108" stroke="#421A05" stroke-width="2" />
+
+                                    <circle cx="32" cy="29" r="3" fill="#EBD48F" />
+
+                                    <!-- Stem -->
+                                    <path d="M32 37V54" stroke="#5C5011" stroke-width="3" stroke-linecap="round" />
+
+                                    <!-- Leaves -->
+                                    <path d="M32 46C22 43 20 49 32 51" fill="#8A7424" stroke="#5C5011"
+                                        stroke-width="1.5" stroke-linejoin="round" />
+
+                                    <path d="M32 41C42 37 45 43 32 46" fill="#D59F3F" stroke="#5C5011"
+                                        stroke-width="1.5" stroke-linejoin="round" />
+
+                                </svg>
+                            </div>
+
+
+
+                            <h3 data-i18n="artisanTitle">
+                                Support Artisans
+                            </h3>
+
+                            <p data-i18n="artisanDescription">
+                                Help rural creators share their skills
+                                with more customers.
+                            </p>
+
+                            <a href="support-artisans.html" class="text-link" data-i18n="artisanLink">
+                                Our mission <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+
+        
+        
+<section class="journey-section" id="journey">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow" data-i18n="journeyEyebrow">
+                Your journey, made simpler
+            </div>
+
+            <h2 data-i18n="journeyTitle">
+                Three simple steps
+            </h2>
+
+            <p data-i18n="journeyDescription">
+                Clear instructions help you understand what
+                to do at every stage.
+            </p>
+
+        </div>
+
+        <div class="story-journey">
+
+            <!-- STEP 1: THE ARTISAN -->
+
+            <article class="story-step step-making">
+
+                <div class="story-art art-workshop">
+
+                    <span class="art-label">THE MAKING</span>
+
+                    <svg viewBox="0 0 420 290"
+                         role="img"
+                         aria-label="Illustration of an artisan workshop">
+
+                        <!-- Background sun -->
+                        <circle cx="335" cy="66" r="39"
+                                fill="#D59F3F" opacity=".8"/>
+
+                        <!-- Hills -->
+                        <path d="M0 174 Q85 92 175 174 T420 151 V290 H0Z"
+                              fill="#D59F3F" opacity=".55"/>
+
+                        <path d="M0 207 Q110 137 220 206 T420 184 V290 H0Z"
+                              fill="#8A7424" opacity=".55"/>
+
+                        <!-- Workshop building -->
+                        <path d="M68 126 L178 52 L288 126 V254 H68Z"
+                              fill="#EBD48F"
+                              stroke="#421A05"
+                              stroke-width="4"
+                              stroke-linejoin="round"/>
+
+                        <!-- Roof -->
+                        <path d="M48 129 L178 39 L308 129"
+                              fill="#A43108"
+                              stroke="#421A05"
+                              stroke-width="5"
+                              stroke-linejoin="round"/>
+
+                        <!-- Door -->
+                        <path d="M146 181 Q178 153 210 181 V254 H146Z"
+                              fill="#5C5011"
+                              stroke="#421A05"
+                              stroke-width="3"/>
+
+                        <circle cx="197" cy="219" r="3"
+                                fill="#EBD48F"/>
+
+                        <!-- Workshop window -->
+                        <rect x="88" y="150" width="39" height="40"
+                              rx="3" fill="#FFF4DF"
+                              stroke="#421A05" stroke-width="3"/>
+
+                        <path d="M107 151 V189 M89 170 H126"
+                              stroke="#421A05" stroke-width="2"/>
+
+                        <!-- Pottery on a table -->
+                        <path d="M245 187 H314"
+                              stroke="#421A05" stroke-width="5"
+                              stroke-linecap="round"/>
+
+                        <path d="M261 154 H286
+                                 Q283 169 297 182
+                                 Q292 196 274 196
+                                 Q256 196 251 182
+                                 Q265 169 261 154Z"
+                              fill="#CF6811"
+                              stroke="#421A05"
+                              stroke-width="3"
+                              stroke-linejoin="round"/>
+
+                        <ellipse cx="274" cy="155" rx="13" ry="5"
+                                 fill="#EBD48F"
+                                 stroke="#421A05"
+                                 stroke-width="2"/>
+
+                        <!-- Handmade basket -->
+                        <path d="M321 169 H360 L354 193 H327Z"
+                              fill="#D59F3F"
+                              stroke="#421A05"
+                              stroke-width="2.5"
+                              stroke-linejoin="round"/>
+
+                        <path d="M330 169 Q341 145 352 169"
+                              fill="none"
+                              stroke="#5C5011"
+                              stroke-width="3"/>
+
+                        <path d="M330 176 L334 189 M340 174 V190 M350 176 L347 189"
+                              stroke="#FFF4DF"
+                              stroke-width="2"/>
+
+                        <!-- Small flowers -->
+                        <circle cx="43" cy="228" r="5" fill="#A43108"/>
+                        <circle cx="53" cy="238" r="4" fill="#D59F3F"/>
+                        <path d="M48 240 V262"
+                              stroke="#5C5011" stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <circle cx="373" cy="226" r="5" fill="#A43108"/>
+                        <path d="M373 231 V255"
+                              stroke="#5C5011" stroke-width="3"
+                              stroke-linecap="round"/>
+
+                    </svg>
+
+                    <div class="scene-number">01</div>
+
+                </div>
+
+                <div class="story-copy">
+
+                    <span class="story-kicker">FIRST · CREATE</span>
+
+                    <h3 data-i18n="stepOneTitle">
+                        Choose Your Products
+                    </h3>
+
+                    <p data-i18n="stepOneDescription">
+                        Browse pictures, select your products and
+                        enter the details.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CONNECTING PATH -->
+
+            <div class="story-connector" aria-hidden="true">
+
+                <svg viewBox="0 0 160 90">
+                    <path d="M5 15 C45 15 35 72 80 48 S120 15 155 60"
+                          fill="none"
+                          stroke="#D59F3F"
+                          stroke-width="18"
+                          stroke-linecap="round"/>
+
+                    <path d="M5 15 C45 15 35 72 80 48 S120 15 155 60"
+                          fill="none"
+                          stroke="#FFF4DF"
+                          stroke-width="2"
+                          stroke-dasharray="5 9"
+                          stroke-linecap="round"/>
+                </svg>
+
+            </div>
+
+
+            <!-- STEP 2: THE JOURNEY -->
+
+            <article class="story-step step-journey">
+
+                <div class="story-art art-transport">
+
+                    <span class="art-label">ON THE WAY</span>
+
+                    <svg viewBox="0 0 420 290"
+                         role="img"
+                         aria-label="Illustration of a delivery truck travelling through fields">
+
+                        <!-- Sky -->
+                        <path d="M0 0 H420 V290 H0Z"
+                              fill="#EBD48F"/>
+
+                        <!-- Sun -->
+                        <circle cx="334" cy="58" r="32"
+                                fill="#D59F3F"/>
+
+                        <!-- Clouds -->
+                        <path d="M35 58 Q35 44 49 44
+                                 Q56 25 75 39
+                                 Q91 34 96 51
+                                 Q112 52 111 64 H40Z"
+                              fill="#FFF4DF"/>
+
+                        <!-- Hills -->
+                        <path d="M0 151 Q83 74 174 147
+                                 T420 121 V290 H0Z"
+                              fill="#8A7424"/>
+
+                        <path d="M0 183 Q105 125 210 179
+                                 T420 158 V290 H0Z"
+                              fill="#5C5011"/>
+
+                        <!-- Winding road -->
+                        <path d="M-10 290 Q94 228 170 250
+                                 Q244 274 292 217
+                                 Q333 168 430 182"
+                              fill="none"
+                              stroke="#EBD48F"
+                              stroke-width="78"
+                              stroke-linecap="round"/>
+
+                        <path d="M-10 290 Q94 228 170 250
+                                 Q244 274 292 217
+                                 Q333 168 430 182"
+                              fill="none"
+                              stroke="#FFF4DF"
+                              stroke-width="3"
+                              stroke-dasharray="12 12"
+                              stroke-linecap="round"/>
+
+                        <!-- Truck cargo -->
+                        <rect x="92" y="136" width="125" height="76"
+                              rx="5"
+                              fill="#CF6811"
+                              stroke="#421A05"
+                              stroke-width="4"/>
+
+                        <path d="M108 151 H200 M108 165 H200"
+                              stroke="#EBD48F"
+                              stroke-width="4"
+                              stroke-linecap="round"/>
+
+                        <!-- Cabin -->
+                        <path d="M217 162 H263 L288 188 V212 H217Z"
+                              fill="#A43108"
+                              stroke="#421A05"
+                              stroke-width="4"
+                              stroke-linejoin="round"/>
+
+                        <!-- Window -->
+                        <path d="M228 169 H257 L274 187 H228Z"
+                              fill="#FFF4DF"
+                              stroke="#421A05"
+                              stroke-width="2.5"
+                              stroke-linejoin="round"/>
+
+                        <!-- Wheels -->
+                        <circle cx="128" cy="216" r="19"
+                                fill="#421A05"
+                                stroke="#FFF4DF"
+                                stroke-width="5"/>
+
+                        <circle cx="128" cy="216" r="7"
+                                fill="#D59F3F"/>
+
+                        <circle cx="249" cy="216" r="19"
+                                fill="#421A05"
+                                stroke="#FFF4DF"
+                                stroke-width="5"/>
+
+                        <circle cx="249" cy="216" r="7"
+                                fill="#D59F3F"/>
+
+                        <!-- Roadside tree -->
+                        <path d="M354 153 V204"
+                              stroke="#421A05"
+                              stroke-width="8"
+                              stroke-linecap="round"/>
+
+                        <circle cx="354" cy="138" r="24"
+                                fill="#5C5011"/>
+
+                        <circle cx="338" cy="148" r="15"
+                                fill="#8A7424"/>
+
+                        <circle cx="369" cy="150" r="16"
+                                fill="#8A7424"/>
+
+                    </svg>
+
+                    <div class="scene-number">02</div>
+
+                </div>
+
+                <div class="story-copy">
+
+                    <span class="story-kicker">NEXT · CONNECT</span>
+
+                    <h3 data-i18n="stepTwoTitle">
+                        Arrange Transport
+                    </h3>
+
+                    <p data-i18n="stepTwoDescription">
+                        Add pickup and destination details and
+                        choose a suitable transport option.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CONNECTING PATH -->
+
+            <div class="story-connector" aria-hidden="true">
+
+                <svg viewBox="0 0 160 90">
+                    <path d="M5 60 C45 60 35 15 80 42 S120 70 155 20"
+                          fill="none"
+                          stroke="#D59F3F"
+                          stroke-width="18"
+                          stroke-linecap="round"/>
+
+                    <path d="M5 60 C45 60 35 15 80 42 S120 70 155 20"
+                          fill="none"
+                          stroke="#FFF4DF"
+                          stroke-width="2"
+                          stroke-dasharray="5 9"
+                          stroke-linecap="round"/>
+                </svg>
+
+            </div>
+
+
+            <!-- STEP 3: ARRIVAL -->
+
+            <article class="story-step step-arrival">
+
+                <div class="story-art art-home">
+
+                    <span class="art-label">A NEW HOME</span>
+
+                    <svg viewBox="0 0 420 290"
+                         role="img"
+                         aria-label="Illustration of a welcoming home receiving a parcel">
+
+                        <!-- Background -->
+                        <rect width="420" height="290"
+                              fill="#F1D8A3"/>
+
+                        <!-- Sun glow -->
+                        <circle cx="327" cy="65" r="43"
+                                fill="#D59F3F" opacity=".75"/>
+
+                        <!-- Rolling landscape -->
+                        <path d="M0 205 Q95 145 193 204
+                                 T420 178 V290 H0Z"
+                              fill="#8A7424" opacity=".7"/>
+
+                        <path d="M0 235 Q120 180 225 235
+                                 T420 215 V290 H0Z"
+                              fill="#5C5011" opacity=".8"/>
+
+                        <!-- Home walls -->
+                        <path d="M94 134 L210 62 L326 134 V248 H94Z"
+                              fill="#FFF4DF"
+                              stroke="#421A05"
+                              stroke-width="4"
+                              stroke-linejoin="round"/>
+
+                        <!-- Roof -->
+                        <path d="M72 139 L210 47 L348 139"
+                              fill="#A43108"
+                              stroke="#421A05"
+                              stroke-width="5"
+                              stroke-linejoin="round"/>
+
+                        <!-- Roof tiles -->
+                        <path d="M115 109 L210 48 L305 109"
+                              fill="none"
+                              stroke="#CF6811"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <!-- Door -->
+                        <path d="M176 177 Q210 148 244 177 V248 H176Z"
+                              fill="#8A7424"
+                              stroke="#421A05"
+                              stroke-width="3"/>
+
+                        <circle cx="230" cy="211" r="4"
+                                fill="#EBD48F"/>
+
+                        <!-- Window -->
+                        <rect x="112" y="154" width="40" height="40"
+                              rx="3"
+                              fill="#D59F3F"
+                              stroke="#421A05"
+                              stroke-width="3"/>
+
+                        <path d="M132 155 V193 M113 174 H151"
+                              stroke="#421A05"
+                              stroke-width="2"/>
+
+                        <!-- Parcel -->
+                        <rect x="267" y="199" width="48" height="42"
+                              rx="3"
+                              fill="#D59F3F"
+                              stroke="#421A05"
+                              stroke-width="3"/>
+
+                        <path d="M291 199 V241 M267 211 H315"
+                              stroke="#A43108"
+                              stroke-width="3"/>
+
+                        <!-- Celebration sparkles -->
+                        <path d="M337 157 V175 M328 166 H346"
+                              stroke="#A43108"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <path d="M67 174 V186 M61 180 H73"
+                              stroke="#CF6811"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <!-- Plants -->
+                        <path d="M61 249 V225 M61 239 L48 230 M61 243 L75 232"
+                              fill="none"
+                              stroke="#5C5011"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <path d="M351 250 V224 M351 237 L338 228 M351 241 L364 230"
+                              fill="none"
+                              stroke="#5C5011"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                    </svg>
+
+                    <div class="scene-number">03</div>
+
+                </div>
+
+                <div class="story-copy">
+
+                    <span class="story-kicker">FINALLY · DELIVER</span>
+
+                    <h3 data-i18n="stepThreeTitle">
+                        Follow Your Journey
+                    </h3>
+
+                    <p data-i18n="stepThreeDescription">
+                        Check shipment updates and confirm delivery
+                        when the order arrives.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="journey-footer-note">
+            <span class="journey-footer-line"></span>
+            <p>From village hands to happy homes.</p>
+            <span class="journey-footer-line"></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+        <!-- CALL TO ACTION -->
+
+        <section class="cta-section" id="help">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <h2 data-i18n="ctaTitle">
+                        Every handmade product has a story.
+                    </h2>
+
+                    <p data-i18n="ctaDescription">
+                        Help that story travel further. GramCraft aims
+                        to make rural commerce and logistics easier
+                        to understand and access.
+                    </p>
+
+                    <a href="#home" class="btn" data-i18n="ctaButton">
+                        Explore GramCraft →
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+                <div class="brand-name">GramCraft</div>
+
+                <p class="footer-copy" data-i18n="footerTagline">
+                    Gaon Se Bazaar Tak
+                </p>
+
+                <p class="footer-copy">
+                    © <span id="currentYear"></span> GramCraft
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home" data-i18n="home">Home</a>
+                <a href="#marketplace" data-i18n="marketplace">Marketplace</a>
+                <a href="#journey" data-i18n="logistics">Logistics</a>
+                <a href="#help" data-i18n="help">Help</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FEEDBACK MESSAGE -->
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+    <script>
+        /* =========================
+           1. MOBILE MENU
+        ========================== */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+                menuToggle.textContent = "☰";
+            });
+        });
+
+
+        /* =========================
+           2. NOTIFICATION MESSAGE
+        ========================== */
+
+        const toast = document.getElementById("toast");
+        let toastTimer;
+
+        function showMessage(message) {
+
+            toast.textContent = message;
+            toast.classList.add("show");
+
+            clearTimeout(toastTimer);
+
+            toastTimer = setTimeout(function () {
+                toast.classList.remove("show");
+            }, 3500);
+        }
+
+
+        /* =========================
+           3. LANGUAGE SUPPORT
+        ========================== */
+
+        const translations = {
+
+            en: {
+                tagline: "Gaon Se Bazaar Tak",
+                home: "Home",
+                marketplace: "Marketplace",
+                logistics: "Logistics",
+                about: "About Us",
+                help: "Help",
+
+                eyebrow: "🌾 Made in our villages, shared with the world",
+
+                heroTitle: 'Handmade Dreams,<br><span>Bigger Markets.</span>',
+
+                heroDescription:
+                    "GramCraft connects rural artisans with customers, helping handmade products reach new homes and creating opportunities for village communities.",
+
+                getStarted: "Let's Get Started →",
+                watchStory: "Discover Our Story",
+                heroNote: "Simple to use. Made for everyone.",
+
+                welcomeEyebrow: "A little help, a world of possibilities",
+                welcomeTitle: "Your village. Your products. Your journey.",
+
+                welcomeDescription:
+                    "Explore handmade treasures, find transport and follow your products on their journey to customers.",
+
+                productsTitle: "Explore Products",
+                productsDescription: "Discover unique handmade products from rural artisans.",
+                exploreLink: "Explore →",
+
+                orderingTitle: "Easy Ordering",
+                orderingDescription: "Choose what you need with simple, easy-to-follow steps.",
+                orderLink: "Learn how →",
+
+                transportTitle: "Safe Transport",
+                transportDescription: "Arrange the journey from the village to the destination.",
+                transportLink: "See the journey →",
+
+                artisanTitle: "Support Artisans",
+                artisanDescription: "Help rural creators share their skills with more customers.",
+                artisanLink: "Our mission →",
+
+                journeyEyebrow: "Your journey, made simpler",
+                journeyTitle: "Three simple steps",
+
+                journeyDescription:
+                    "Clear instructions help you understand what to do at every stage.",
+
+                stepOneTitle: "Choose Your Products",
+                stepOneDescription:
+                    "Browse pictures, select your products and enter the details.",
+
+                stepTwoTitle: "Arrange Transport",
+                stepTwoDescription:
+                    "Add pickup and destination details and choose a suitable transport option.",
+
+                stepThreeTitle: "Follow Your Journey",
+                stepThreeDescription:
+                    "Check shipment updates and confirm delivery when the order arrives.",
+
+                ctaTitle: "Every handmade product has a story.",
+
+                ctaDescription:
+                    "Help that story travel further. GramCraft aims to make rural commerce and logistics easier to understand and access.",
+
+                ctaButton: "Explore GramCraft →",
+                footerTagline: "Gaon Se Bazaar Tak",
+
+                storyMessage:
+                    "Every village has talented creators. GramCraft aims to help their handmade products reach more customers.",
+
+                helpMessage:
+                    "Welcome to GramCraft. Choose a section to explore the website."
+            },
+
+            hi: {
+                tagline: "Gaon Se Bazaar Tak",
+                home: "होम",
+                marketplace: "बाज़ार",
+                logistics: "डिलीवरी",
+                about: "हमारे बारे में",
+                help: "मदद",
+
+                eyebrow: "🌾 हमारे गाँवों में बना, दुनिया तक पहुँचे",
+
+                heroTitle: 'हाथों के हुनर के सपने,<br><span>बाज़ार के नए अवसर।</span>',
+
+                heroDescription:
+                    "GramCraft गाँव के कारीगरों को ग्राहकों से जोड़ने और उनके हस्तनिर्मित उत्पादों को नए बाज़ारों तक पहुँचाने में मदद करने के लिए बनाया गया है।",
+
+                getStarted: "शुरू करें →",
+                watchStory: "हमारी कहानी जानें",
+                heroNote: "आसान इस्तेमाल। सभी के लिए।",
+
+                welcomeEyebrow: "थोड़ी मदद, नए अवसर",
+                welcomeTitle: "आपका गाँव। आपके उत्पाद। आपका सफ़र।",
+
+                welcomeDescription:
+                    "हस्तनिर्मित उत्पाद देखें, परिवहन चुनें और अपने सामान के सफ़र की जानकारी पाएँ।",
+
+                productsTitle: "उत्पाद देखें",
+                productsDescription: "गाँव के कारीगरों के अनोखे हस्तनिर्मित उत्पाद खोजें।",
+                exploreLink: "देखें →",
+
+                orderingTitle: "आसान ऑर्डर",
+                orderingDescription: "सरल चरणों में अपनी पसंद के उत्पाद चुनें।",
+                orderLink: "जानें →",
+
+                transportTitle: "सुरक्षित परिवहन",
+                transportDescription: "गाँव से मंज़िल तक सामान पहुँचाने की व्यवस्था करें।",
+                transportLink: "सफ़र देखें →",
+
+                artisanTitle: "कारीगरों का साथ दें",
+                artisanDescription: "गाँव के कारीगरों के हुनर को अधिक ग्राहकों तक पहुँचाने में मदद करें।",
+                artisanLink: "हमारा उद्देश्य →",
+
+                journeyEyebrow: "आपका सफ़र, अब आसान",
+                journeyTitle: "तीन आसान चरण",
+
+                journeyDescription:
+                    "हर चरण में सरल निर्देश आपको सही रास्ता दिखाते हैं।",
+
+                stepOneTitle: "उत्पाद चुनें",
+                stepOneDescription: "तस्वीरें देखकर उत्पाद चुनें और ज़रूरी जानकारी भरें।",
+
+                stepTwoTitle: "परिवहन चुनें",
+                stepTwoDescription: "सामान कहाँ से उठाना है और कहाँ पहुँचाना है, यह बताएँ।",
+
+                stepThreeTitle: "सफ़र की जानकारी पाएँ",
+                stepThreeDescription: "सामान की स्थिति देखें और पहुँचने पर डिलीवरी की पुष्टि करें।",
+
+                ctaTitle: "हर हस्तनिर्मित उत्पाद की अपनी कहानी है।",
+
+                ctaDescription:
+                    "उस कहानी को आगे बढ़ाएँ। GramCraft गाँव के व्यापार और सामान पहुँचाने की प्रक्रिया को आसान बनाने का प्रयास करता है।",
+
+                ctaButton: "GramCraft देखें →",
+                footerTagline: "गाँव से बाज़ार तक",
+
+                storyMessage:
+                    "हर गाँव में हुनरमंद कारीगर हैं। GramCraft उनके उत्पादों को अधिक ग्राहकों तक पहुँचाने में मदद करना चाहता है।",
+
+                helpMessage:
+                    "GramCraft में आपका स्वागत है। वेबसाइट देखने के लिए कोई सेक्शन चुनें।"
+            },
+
+            mr: {
+                tagline: "गावापासून बाजारापर्यंत",
+                home: "मुख्यपृष्ठ",
+                marketplace: "बाजारपेठ",
+                logistics: "वाहतूक",
+                about: "आमच्याबद्दल",
+                help: "मदत",
+
+                eyebrow: "🌾 आपल्या गावात बनलेले, जगभर पोहोचणारे",
+
+                heroTitle: 'हातांनी घडवलेली स्वप्ने,<br><span>मोठ्या बाजारपेठा.</span>',
+
+                heroDescription:
+                    "GramCraft ग्रामीण कारागिरांना ग्राहकांशी जोडण्यासाठी आणि त्यांच्या हस्तनिर्मित वस्तू अधिक लोकांपर्यंत पोहोचवण्यासाठी मदत करण्याच्या उद्देशाने तयार केले आहे.",
+
+                getStarted: "सुरुवात करा →",
+                watchStory: "आमची गोष्ट जाणून घ्या",
+                heroNote: "वापरण्यास सोपे. सर्वांसाठी.",
+
+                welcomeEyebrow: "थोडी मदत, अनेक संधी",
+                welcomeTitle: "तुमचे गाव. तुमची उत्पादने. तुमचा प्रवास.",
+
+                welcomeDescription:
+                    "हस्तनिर्मित वस्तू पाहा, वाहतुकीचा पर्याय निवडा आणि वस्तूंच्या प्रवासाची माहिती मिळवा.",
+
+                productsTitle: "उत्पादने पाहा",
+                productsDescription: "ग्रामीण कारागिरांच्या सुंदर हस्तनिर्मित वस्तू शोधा.",
+                exploreLink: "पाहा →",
+
+                orderingTitle: "सोप्या पद्धतीने ऑर्डर",
+                orderingDescription: "सोप्या टप्प्यांमध्ये तुम्हाला हवी असलेली उत्पादने निवडा.",
+                orderLink: "जाणून घ्या →",
+
+                transportTitle: "सुरक्षित वाहतूक",
+                transportDescription: "गावातून इच्छित ठिकाणी वस्तू पोहोचवण्याची व्यवस्था करा.",
+                transportLink: "प्रवास पाहा →",
+
+                artisanTitle: "कारागिरांना साथ द्या",
+                artisanDescription: "ग्रामीण कारागिरांचे कौशल्य अधिक ग्राहकांपर्यंत पोहोचवण्यास मदत करा.",
+                artisanLink: "आमचे ध्येय →",
+
+                journeyEyebrow: "तुमचा प्रवास, अधिक सोपा",
+                journeyTitle: "तीन सोपे टप्पे",
+
+                journeyDescription:
+                    "प्रत्येक टप्प्यावर दिलेल्या सोप्या सूचना तुम्हाला मदत करतील.",
+
+                stepOneTitle: "उत्पादने निवडा",
+                stepOneDescription: "चित्रे पाहून उत्पादने निवडा आणि आवश्यक माहिती भरा.",
+
+                stepTwoTitle: "वाहतूक ठरवा",
+                stepTwoDescription: "वस्तू कुठून घ्यायच्या आणि कुठे पोहोचवायच्या ते सांगा.",
+
+                stepThreeTitle: "प्रवासाची माहिती मिळवा",
+                stepThreeDescription: "वस्तूंची स्थिती पाहा आणि पोहोचल्यानंतर डिलिव्हरीची पुष्टी करा.",
+
+                ctaTitle: "प्रत्येक हस्तनिर्मित वस्तूची एक गोष्ट असते.",
+
+                ctaDescription:
+                    "ही गोष्ट अधिक लोकांपर्यंत पोहोचवा. ग्रामीण व्यापार आणि वाहतूक सोपी करण्याचा GramCraft चा प्रयत्न आहे.",
+
+                ctaButton: "GramCraft पाहा →",
+                footerTagline: "गावापासून बाजारापर्यंत",
+
+                storyMessage:
+                    "प्रत्येक गावात कुशल कारागीर आहेत. त्यांच्या वस्तू अधिक ग्राहकांपर्यंत पोहोचवण्यास GramCraft मदत करू इच्छिते.",
+
+                helpMessage:
+                    "GramCraft मध्ये आपले स्वागत आहे. वेबसाइट पाहण्यासाठी एक विभाग निवडा."
+            }
+        };
+
+
+        const languageSelect = document.getElementById("languageSelect");
+
+        function changeLanguage(language) {
+
+            const selectedTranslations = translations[language];
+
+            if (!selectedTranslations) {
+                return;
+            }
+
+            document.documentElement.lang = language;
+            localStorage.setItem("gramCraftLanguage", language);
+
+            document.querySelectorAll("[data-i18n]").forEach(function (element) {
+
+                const key = element.dataset.i18n;
+                const translatedText = selectedTranslations[key];
+
+                if (translatedText) {
+                    element.innerHTML = translatedText;
+                }
+            });
+
+            // Update the accessible navigation labels.
+            navLinks.setAttribute(
+                "aria-label",
+                language === "hi"
+                    ? "मुख्य नेविगेशन"
+                    : language === "mr"
+                        ? "मुख्य नेव्हिगेशन"
+                        : "Main navigation"
+            );
+
+            // Stop speech when changing languages.
+            if ("speechSynthesis" in window) {
+                window.speechSynthesis.cancel();
+            }
+        }
+
+        // Load previously selected language
+const savedLanguage = localStorage.getItem("gramCraftLanguage") || "en";
+
+if (languageSelect) {
+    languageSelect.value = savedLanguage;
+}
+
+changeLanguage(savedLanguage);
+
+
+        languageSelect.addEventListener("change", function () {
+
+            changeLanguage(languageSelect.value);
+
+            showMessage(
+                languageSelect.value === "hi"
+                    ? "भाषा बदल दी गई है।"
+                    : languageSelect.value === "mr"
+                        ? "भाषा बदलली आहे."
+                        : "Language changed successfully."
+            );
+        });
+
+
+        /* =========================
+           4. AUDIO HELP
+        ========================== */
+
+        function speakMessage(message) {
+
+            if (!("speechSynthesis" in window)) {
+
+                showMessage(
+                    "Audio playback is not supported in this browser."
+                );
+
+                return;
+            }
+
+            window.speechSynthesis.cancel();
+
+            const speech = new SpeechSynthesisUtterance(message);
+
+            const language = languageSelect.value;
+
+            speech.lang =
+                language === "hi"
+                    ? "hi-IN"
+                    : language === "mr"
+                        ? "mr-IN"
+                        : "en-IN";
+
+            speech.rate = 0.88;
+            speech.pitch = 1;
+
+            window.speechSynthesis.speak(speech);
+        }
+
+
+        document.getElementById("audioButton").addEventListener("click", function () {
+
+            const language = languageSelect.value;
+
+            const messages = {
+                en: "Welcome to GramCraft. Explore handmade products, learn about transport, and discover how GramCraft aims to connect rural artisans with customers.",
+                hi: "GramCraft में आपका स्वागत है। हस्तनिर्मित उत्पाद देखें, परिवहन के बारे में जानें और गाँव के कारीगरों के उत्पादों को ग्राहकों तक पहुँचाने की जानकारी पाएँ।",
+                mr: "GramCraft मध्ये आपले स्वागत आहे. हस्तनिर्मित वस्तू पाहा, वाहतुकीबद्दल जाणून घ्या आणि ग्रामीण कारागिरांच्या वस्तू ग्राहकांपर्यंत कशा पोहोचतात ते समजून घ्या."
+            };
+
+            speakMessage(messages[language]);
+        });
+
+
+        /* =========================
+           5. VILLAGE STORY BUTTON
+        ========================== */
+
+        document.getElementById("storyButton").addEventListener("click", function () {
+
+            const language = languageSelect.value;
+            const message = translations[language].storyMessage;
+
+            showMessage(message);
+
+            speakMessage(message);
+        });
+
+
+        /* =========================
+           6. FOOTER YEAR
+        ========================== */
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>My Cart | GramCraft</title>
+
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="carts.css">
+
+</head>
+
+<body class="cart-page">
+
+<header class="market-nav">
+    <a href="index.html" class="brand">GramCraft</a>
+
+```
+<a href="products.html" class="text-link" id="continueShoppingTop">
+    ← Continue Shopping
+</a>
+
+<label for="languageSelect" id="languageLabel">Language:</label>
+<select id="languageSelect" aria-label="Choose language">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+    <option value="mr">मराठी</option>
+</select>
+
+
+</header>
+
+<main class="cart-main">
+
+    <section class="cart-heading">
+        <span class="cart-eyebrow">YOUR LITTLE COLLECTION</span>
+
+        <h1>Your Shopping Cart<span>.</span></h1>
+
+        <p>
+            Every handmade treasure carries a little story.
+            Here's what you've picked.
+        </p>
+    </section>
+
+    <div class="cart-layout">
+
+        <section class="cart-items-section">
+
+            <div class="cart-section-heading">
+                <h2>Your Items</h2>
+                <span id="cartItemCount">0 items</span>
+            </div>
+
+            <div id="cartItems" class="cart-items"></div>
+
+            <div id="emptyCart" class="empty-cart" hidden>
+                <div class="empty-cart-icon">♡</div>
+
+                <h2>Your cart is waiting for a little love.</h2>
+
+                <p>You haven't added any handmade treasures yet.</p>
+
+                <a href="products.html" class="cart-shop-button">
+                    Explore Products →
+                </a>
+            </div>
+
+        </section>
+
+        <aside class="cart-summary">
+
+            <span class="summary-eyebrow">THE TOTAL</span>
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-line">
+                <span>Items subtotal</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+
+            <div class="summary-line">
+                <span>Delivery</span>
+                <span class="delivery-note">Calculated at checkout</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+                <span>Estimated total</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <p class="summary-note">
+                Your final delivery charges will be confirmed
+                before you place your order.
+            </p>
+
+            <button
+                type="button"
+                id="checkoutButton"
+                class="checkout-button"
+                disabled
+            >
+                Proceed to Checkout →
+            </button>
+
+            <a href="products.html" class="back-shopping">
+                Continue exploring
+            </a>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<footer class="market-footer">
+    <p>Made with care. Carried with love. 🌾</p>
+</footer>
+
+<script src="carts.js"></script>
+
+
+</body>
+</html>

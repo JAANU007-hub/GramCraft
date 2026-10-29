@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Review Your Order | GramCraft</title>
+
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="order.css">
+<link rel="stylesheet" href="review-order.css">
+
+
+</head>
+
+<body class="order-page review-page">
+
+<header class="market-nav">
+    <a href="index.html" class="brand">GramCraft</a>
+
+
+<a href="order.html" class="text-link" id="editDeliveryLink">
+    ← Edit Delivery Details
+</a>
+
+<label for="languageSelect" id="languageLabel">Language:</label>
+
+<select id="languageSelect" aria-label="Choose language">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+    <option value="mr">मराठी</option>
+</select>
+
+
+</header>
+
+
+<main class="order-main">
+
+    <section class="order-heading">
+        <span class="order-eyebrow">ALMOST THERE</span>
+
+        <h1>Review your <span>order.</span></h1>
+
+        <p>
+            Take a moment to check your handmade treasures
+            and delivery details before placing your order.
+        </p>
+    </section>
+
+    <div class="review-layout">
+
+        <section class="delivery-card">
+
+            <div class="form-heading">
+                <div class="form-step">01</div>
+
+                <div>
+                    <h2>Your Selected Products</h2>
+                    <p>Make sure everything looks right.</p>
+                </div>
+            </div>
+
+            <div id="reviewOrderItems" class="order-items">
+                <!-- Products will be displayed here by JavaScript. -->
+            </div>
+
+            <div class="review-divider"></div>
+
+            <div class="form-heading">
+                <div class="form-step">02</div>
+
+                <div>
+                    <h2>Delivery Information</h2>
+                    <p>Where your handmade treasures will arrive.</p>
+                </div>
+            </div>
+
+            <div id="reviewDeliveryDetails" class="review-delivery-details">
+                <!-- Customer details will be displayed here by JavaScript. -->
+            </div>
+
+            <a href="order.html" class="edit-details-link">
+                ✎ Edit delivery details
+            </a>
+
+            <div id="reviewMessage"
+                 class="order-form-message"
+                 role="status"
+                 hidden>
+            </div>
+
+            <!-- Order Success Popup -->
+
+<div id="orderSuccessModal" class="success-modal" hidden>
+    <div class="success-card">
+
+
+    <!-- Flying Confetti -->
+    <div id="confettiContainer" class="confetti-container"></div>
+
+    <!-- Success Icon -->
+    <div class="success-icon">✓</div>
+
+    <span class="success-label">GRAMCRAFT ORDER CONFIRMED</span>
+
+    <h2>Your Order Has Been Placed!</h2>
+
+    <p class="success-description">
+        Thank you for supporting our local artisans.
+        Your handmade treasures are now part of your journey!
+    </p>
+
+    <!-- Order ID -->
+    <div class="success-order-id">
+        <span>Order ID</span>
+        <strong id="successOrderId">GC-000000</strong>
+    </div>
+
+    <!-- Customer and Product Details -->
+    <div id="successOrderDetails" class="success-order-details"></div>
+
+    <!-- Final Amount -->
+    <div class="success-total">
+        <span>Grand Total</span>
+        <strong id="successGrandTotal">₹0</strong>
+    </div>
+
+    <!-- Continue Shopping -->
+    <button type="button" id="continueShoppingButton">
+        Continue Shopping →
+    </button>
+
+    <p class="success-footer">
+        Made with care. Carried with love.
+    </p>
+
+</div>
+
+
+</div>
+
+
+        </section>
+
+        <aside class="order-summary-card">
+
+            <span class="summary-eyebrow">ONE LAST LOOK</span>
+
+            <h2>Order Summary</h2>
+
+            <div class="order-summary-line">
+                <span>Total Quantity</span>
+                <strong id="reviewQuantity">0</strong>
+            </div>
+
+            <div class="order-summary-line">
+                <span>Items Subtotal</span>
+                <strong id="reviewSubtotal">₹0</strong>
+            </div>
+
+            <div class="order-summary-line">
+                <span>Delivery Charges</span>
+                <strong id="reviewDeliveryCharge">₹0</strong>
+            </div>
+
+            <div class="order-summary-divider"></div>
+
+            <div class="order-total-line">
+                <span>Grand Total</span>
+                <strong id="reviewTotal">₹0</strong>
+            </div>
+
+           <p class="order-summary-note">
+    Delivery charges are calculated as 8% of your product subtotal.
+</p>
+
+
+            <button type="button"
+                    id="confirmOrderButton"
+                    class="place-order-button">
+                Confirm & Place Order →
+            </button>
+
+            <a href="carts.html" class="edit-cart-link">
+                ← Return to Cart
+            </a>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<footer class="market-footer">
+    <p>Made with care. Carried with love. 🌾</p>
+</footer>
+
+<script src="review-order.js"></script>
+
+
+</body>
+</html>

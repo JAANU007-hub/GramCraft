@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marketplace | GramCraft</title>
+
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="market-nav">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">G</span>
+
+            <span>
+                <strong>GramCraft</strong>
+                <small>ROOTED IN TRADITION</small>
+            </span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            <span aria-hidden="true">←</span> Back to Home
+        </a>
+
+
+        <a href="carts.html" class="text-link">
+            🛍️ My Cart
+        </a>
+
+        <label for="languageSelect" class="language-label">Language:</label>
+
+<select id="languageSelect" aria-label="Choose language">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+    <option value="mr">मराठी</option>
+</select>
+
+
+    </header>
+
+
+    <main>
+
+        <!-- MARKETPLACE INTRODUCTION -->
+        <section class="market-hero">
+
+            <div class="hero-decoration decoration-one"></div>
+            <div class="hero-decoration decoration-two"></div>
+
+            <div class="market-hero-content">
+
+                <span class="market-eyebrow">
+                    MADE BY HANDS, SHARED WITH LOVE
+                </span>
+
+                <h1>
+                    Little treasures.<br>
+                    <span>Beautiful stories.</span>
+                </h1>
+
+                <p>
+                    Explore handmade creations from rural artisans.
+                    Every piece carries a little tradition and a lot of love.
+                </p>
+
+                <a href="#browse-products" class="browse-button">
+                    Discover treasures <span aria-hidden="true">↓</span>
+                </a>
+
+            </div>
+
+            <div class="market-hero-art" aria-hidden="true">
+                <div class="art-sun"></div>
+
+                <div class="art-pot pot-large">
+                    <span></span>
+                </div>
+
+                <div class="art-pot pot-small">
+                    <span></span>
+                </div>
+
+                <div class="art-leaf leaf-one"></div>
+                <div class="art-leaf leaf-two"></div>
+
+                <div class="art-caption">
+                    <span>✳</span>
+                    Crafted with care
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT MARKETPLACE -->
+        <section class="marketplace" id="browse-products">
+
+            <div class="marketplace-heading">
+
+                <div>
+                    <span class="section-eyebrow">
+                        THE ARTISAN COLLECTION
+                    </span>
+
+                    <h2>Find your kind of special.</h2>
+
+                    <p>
+                        From everyday essentials to thoughtful gifts,
+                        discover something made with heart.
+                    </p>
+                </div>
+
+                <div class="artisan-note">
+                    <span class="note-symbol">✳</span>
+
+                    <span>
+                        <strong>Every purchase matters</strong>
+                        <small>Support India's rural artisans</small>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH BAR -->
+            <div class="market-tools">
+
+                <span class="product-count" id="productCount">
+                    Discover our collection
+                </span>
+
+            </div>
+
+
+            <!-- CATEGORY NAVIGATION -->
+            <div class="category-heading">
+                <h3>Explore by category</h3>
+
+                <span>Find something you love</span>
+            </div>
+
+            <div class="category-list" id="categoryList">
+
+                <button class="category-button active" type="button" data-category="All">
+                    <span class="category-symbol">✳</span>
+                    <span>All treasures</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Pottery">
+                    <span class="category-symbol">◒</span>
+                    <span>Pottery</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Handmade Crafts">
+                    <span class="category-symbol">❋</span>
+                    <span>Handmade crafts</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Home Decor">
+                    <span class="category-symbol">⌂</span>
+                    <span>Home decor</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Textiles">
+                    <span class="category-symbol">▧</span>
+                    <span>Textiles</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Jewellery">
+                    <span class="category-symbol">◇</span>
+                    <span>Jewellery</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Cloth">
+                    <span class="category-symbol">◇</span>
+                    <span>Cloth</span>
+                </button>
+
+                <button class="category-button" type="button" data-category="Mat">
+                    <span class="category-symbol">◇</span>
+                    <span>Mat</span>
+                </button>
+
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+            <div class="products-grid" id="productsGrid">
+
+                <!-- JavaScript will load products from the backend here. -->
+
+            </div>
+
+
+            <!-- Add Product Form -->
+
+            <section class="add-product-panel" id="addProductPanel" hidden>
+                <div class="add-product-heading">
+                    <span class="form-eyebrow">MADE WITH LOVE ♡</span>
+                    <h2>Share your handmade treasure</h2>
+                    <p>Add your product details and let more people discover your craft.</p>
+                </div>
+
+
+                <form id="addProductForm">
+                    <div class="form-group">
+                        <label for="productName">Product name *</label>
+                        <input type="text" id="productName" name="name" placeholder="e.g. Hand-painted clay diya"
+                            maxlength="100" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productPrice">Price (₹) *</label>
+                            <input type="number" id="productPrice" name="price" placeholder="e.g. 250" min="1"
+                                step="0.01" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productCategory">Category *</label>
+                            <select id="productCategory" name="category" required>
+                                <option value="">Choose a category</option>
+                                <option value="Pottery">Pottery</option>
+                                <option value="Handmade Crafts">Handmade Crafts</option>
+                                <option value="Home Decor">Home Decor</option>
+                                <option value="Textiles">Textiles</option>
+                                <option value="Jewellery">Jewellery</option>
+                                <option value="Cloth">Cloth</option>
+                                <option value="Mat">Mat</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">Product story *</label>
+                        <textarea id="productDescription" name="description"
+                            placeholder="Tell customers what makes your creation special..." rows="4" maxlength="500"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Product photo *</label>
+                        <label class="image-upload-box" for="productImage">
+                            <span class="upload-icon">＋</span>
+                            <strong>Choose a photo</strong>
+                            <span>Upload an image from your device</span>
+                            <input type="file" id="productImage" name="image" accept="image/*" required>
+                        </label>
+
+                        <div id="imagePreviewContainer" hidden>
+                            <img id="productImagePreview" alt="Selected product preview">
+                            <button type="button" id="removeProductImage">
+                                Remove photo
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="form-feedback" id="productFormFeedback" role="status"></p>
+
+                    <div class="form-actions">
+                        <button type="button" class="form-cancel-button" id="cancelProductForm">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="form-submit-button" id="submitProductButton">
+                            Add my product →
+                        </button>
+                    </div>
+                </form>
+
+
+            </section>
+
+
+
+            <!-- LOADING / ERROR / EMPTY MESSAGES -->
+            <div class="products-message" id="productsMessage" aria-live="polite">
+                Preparing your collection...
+            </div>
+
+
+            <!-- EMPTY SEARCH STATE -->
+            <div class="empty-products" id="emptyProducts" hidden>
+
+                <div class="empty-symbol">✳</div>
+
+                <h3>No treasures found just yet.</h3>
+
+                <p>
+                    Try another search or explore a different category.
+                </p>
+
+                <button type="button" id="resetFilters">
+                    Show all products
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARTISAN INVITATION -->
+        <section class="artisan-invitation">
+
+            <div class="invitation-decoration" aria-hidden="true">
+                ✳
+            </div>
+
+            <div class="invitation-copy">
+
+                <span>FOR OUR ARTISANS</span>
+
+                <h2>Your craft deserves to be discovered.</h2>
+
+                <p>
+                    Have something beautiful to share?
+                    Bring your creations to the GramCraft community.
+                </p>
+
+            </div>
+
+            <a href="artisan.html" class="artisan-button">
+                Visit artisan space <span aria-hidden="true">→</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="market-footer">
+
+        <a href="index.html" class="footer-brand">
+            <span class="brand-mark">G</span>
+            GramCraft
+        </a>
+
+        <p>From village hands to happy homes.</p>
+
+        <span>CRAFTED WITH CARE · GRAMCRAFT</span>
+
+    </footer>
+
+
+    <script src="product.js"></script>
+
+</body>
+
+</html>

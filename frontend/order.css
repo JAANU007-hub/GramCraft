@@ -1,0 +1,594 @@
+
+/* ========================================
+   GRAMCRAFT — CUSTOMER ORDER PAGE
+   ======================================== */
+
+.order-page {
+    --order-mud: #5C5011;
+    --order-corn: #8A7424;
+    --order-rust: #A43108;
+    --order-cinnamon: #CF6811;
+    --order-dark: #421A05;
+    --order-gold: #D59F3F;
+    --order-cream: #EBD48F;
+
+    background: #FBF7EC;
+    color: var(--order-dark);
+    font-family: inherit;
+}
+
+
+/* Navigation */
+
+.order-page .market-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 7%;
+    background: #FFFDF7;
+    border-bottom: 1px solid rgba(92, 80, 17, 0.12);
+}
+
+.order-page .brand {
+    color: var(--order-dark);
+    font-size: 1.65rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.8px;
+}
+
+.order-page .text-link {
+    color: var(--order-mud);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.order-page .text-link:hover {
+    color: var(--order-rust);
+}
+
+
+/* Main Layout */
+
+.order-main {
+    width: min(1180px, 88%);
+    margin: 0 auto;
+    padding: 65px 0 90px;
+}
+
+
+/* Page Heading */
+
+.order-heading {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.order-eyebrow,
+.summary-eyebrow {
+    display: inline-block;
+    color: var(--order-corn);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.order-heading h1 {
+    margin: 17px 0;
+    color: var(--order-dark);
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.order-heading h1 span {
+    color: var(--order-cinnamon);
+}
+
+.order-heading > p {
+    max-width: 580px;
+    margin: 0 auto;
+    color: #776B53;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* Main Two-Column Layout */
+
+.order-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+    align-items: start;
+    gap: 30px;
+}
+
+
+/* Delivery Form Card */
+
+.delivery-card,
+.order-summary-card {
+    min-width: 0;
+    padding: 34px;
+    background: #FFFEFA;
+    border: 1px solid rgba(138, 116, 36, 0.18);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(66, 26, 5, 0.045);
+}
+
+.form-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #EFE7D5;
+}
+
+.form-step {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    place-items: center;
+    background: var(--order-cream);
+    color: var(--order-dark);
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.form-heading h2,
+.order-summary-card h2 {
+    margin: 0;
+    color: var(--order-dark);
+    font-size: 1.45rem;
+}
+
+.form-heading p {
+    margin: 7px 0 0;
+    color: #82745C;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* Form Section Headings */
+
+.form-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 30px 0 20px;
+}
+
+.form-section-heading > span {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    background: #F5EBD0;
+    border-radius: 11px;
+    font-size: 1rem;
+}
+
+.form-section-heading h3 {
+    margin: 0;
+    color: var(--order-dark);
+    font-size: 1.02rem;
+    font-weight: 750;
+}
+
+.address-heading {
+    margin-top: 38px;
+}
+
+
+/* Form Grid */
+
+.order-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 17px;
+}
+
+.order-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.order-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.order-field label {
+    color: #514326;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.optional-label {
+    margin-left: 5px;
+    color: #9B8B70;
+    font-size: 0.76rem;
+    font-weight: 500;
+}
+
+
+/* Inputs */
+
+.order-field input,
+.order-field select {
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 14px;
+    background: #FFFDF7;
+    color: var(--order-dark);
+    border: 1px solid #E4D8BE;
+    border-radius: 10px;
+    outline: none;
+    font: inherit;
+    font-size: 0.9rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.order-field input::placeholder {
+    color: #AA9D85;
+}
+
+.order-field input:focus,
+.order-field select:focus {
+    background: #FFFFFF;
+    border-color: var(--order-cinnamon);
+    box-shadow: 0 0 0 3px rgba(207, 104, 17, 0.12);
+}
+
+.order-field input:invalid:not(:placeholder-shown) {
+    border-color: #C66B4A;
+}
+
+.order-field select {
+    cursor: pointer;
+}
+
+
+/* Address Help Box */
+
+.address-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 28px;
+    padding: 17px;
+    background: #F8F0D9;
+    border: 1px solid #E9D8A8;
+    border-radius: 13px;
+}
+
+.address-tip > span {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.address-tip p {
+    margin: 0;
+    color: #76633A;
+    font-size: 0.84rem;
+    line-height: 1.75;
+}
+
+.address-tip strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--order-dark);
+}
+
+
+/* Form Message */
+
+.order-form-message {
+    margin-top: 18px;
+    padding: 13px 15px;
+    background: #F8E9E0;
+    color: var(--order-rust);
+    border: 1px solid #E9C7B5;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+/* Place Order Button */
+
+.place-order-button {
+    width: 100%;
+    min-height: 54px;
+    margin-top: 27px;
+    padding: 15px 20px;
+    background: var(--order-dark);
+    color: #FFF8E9;
+    border: 1px solid var(--order-dark);
+    border-radius: 12px;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 750;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.place-order-button:hover {
+    background: var(--order-rust);
+    border-color: var(--order-rust);
+    box-shadow: 0 7px 18px rgba(164, 49, 8, 0.15);
+    transform: translateY(-2px);
+}
+
+.place-order-button:focus-visible {
+    outline: 3px solid var(--order-gold);
+    outline-offset: 3px;
+}
+
+.form-footnote {
+    margin: 13px 0 0;
+    color: #97876C;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* Order Summary */
+
+.order-summary-card {
+    position: sticky;
+    top: 24px;
+    padding: 30px;
+}
+
+.order-summary-card h2 {
+    margin-top: 12px;
+    margin-bottom: 25px;
+    font-size: 1.55rem;
+}
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    align-items: center;
+    gap: 13px;
+}
+
+.order-item-image {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    place-items: center;
+    background: #F4E8C9;
+    border-radius: 12px;
+}
+
+.order-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-item-details {
+    min-width: 0;
+}
+
+.order-item-details h3 {
+    margin: 0;
+    color: var(--order-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.order-item-details p {
+    margin: 5px 0 0;
+    color: #8B7857;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.order-item-price {
+    margin-top: 7px;
+    color: var(--order-rust);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+
+/* Summary Totals */
+
+.order-summary-divider {
+    height: 1px;
+    margin: 23px 0;
+    background: #EDE3D0;
+}
+
+.order-summary-line {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 17px 0;
+    color: #796A51;
+    font-size: 0.87rem;
+    line-height: 1.6;
+}
+
+.order-summary-line strong {
+    color: var(--order-dark);
+    text-align: right;
+}
+
+.delivery-pending {
+    max-width: 130px;
+    color: var(--order-cinnamon);
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.order-total-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--order-dark);
+    font-size: 0.96rem;
+    font-weight: 750;
+}
+
+.order-total-line strong {
+    color: var(--order-rust);
+    font-size: 1.55rem;
+}
+
+.order-summary-note {
+    margin: 20px 0;
+    padding: 14px;
+    background: #F8F1DF;
+    color: #7B6B4C;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    line-height: 1.75;
+}
+
+.edit-cart-link {
+    display: block;
+    margin-top: 22px;
+    color: var(--order-corn);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.edit-cart-link:hover {
+    color: var(--order-rust);
+}
+
+
+/* Footer */
+
+.order-page .market-footer {
+    padding: 25px 20px;
+    background: #F1E5C7;
+    color: #75623D;
+    text-align: center;
+}
+
+.order-page .market-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+
+/* Responsive Layout */
+
+@media (max-width: 900px) {
+    .order-main {
+        width: min(700px, 90%);
+        padding-top: 45px;
+    }
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary-card {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    .order-page .market-nav {
+        padding: 17px 5%;
+    }
+
+    .order-page .brand {
+        font-size: 1.35rem;
+    }
+
+    .order-page .text-link {
+        font-size: 0.83rem;
+    }
+
+    .order-main {
+        width: 92%;
+        padding: 36px 0 55px;
+    }
+
+    .order-heading {
+        margin-bottom: 30px;
+    }
+
+    .order-heading h1 {
+        font-size: 2.15rem;
+        letter-spacing: -0.8px;
+    }
+
+    .order-heading > p {
+        font-size: 0.91rem;
+    }
+
+    .delivery-card,
+    .order-summary-card {
+        padding: 22px 18px;
+        border-radius: 17px;
+    }
+
+    .form-heading h2 {
+        font-size: 1.25rem;
+    }
+
+    .order-form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .order-field.full-width {
+        grid-column: auto;
+    }
+
+    .order-field input,
+    .order-field select {
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    .order-summary-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .order-field input,
+    .order-field select,
+    .place-order-button {
+        transition: none;
+    }
+}
+

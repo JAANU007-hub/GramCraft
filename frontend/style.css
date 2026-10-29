@@ -1,0 +1,2017 @@
+/* =========================
+           1. COLOURS AND RESET
+        ========================== */
+
+:root {
+    --mud-brown: #5C5011;
+    --corn: #8A7424;
+    --muddy: #A43108;
+    --cinnamon: #CF6811;
+    --old-study: #421A05;
+    --banana: #D59F3F;
+    --cream: #EBD48F;
+
+    --background: #FFF7EA;
+    --white: #FFFFFF;
+    --text: #382719;
+    --muted: #776858;
+    --border: #EADCC7;
+
+    --radius: 22px;
+    --shadow: 0 8px 28px rgba(66, 26, 5, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+button,
+select,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--cinnamon);
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+
+/* =========================
+           2. NAVIGATION
+        ========================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 247, 234, 0.96);
+    border-bottom: 1px solid rgba(138, 116, 36, 0.15);
+    backdrop-filter: blur(14px);
+}
+
+.nav-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #F0DDAA;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+.brand-name {
+    color: var(--old-study);
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cinnamon);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.language-select {
+    max-width: 130px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: transparent;
+    color: var(--old-study);
+}
+
+.icon-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--old-study);
+    font-size: 21px;
+}
+
+.icon-button:hover {
+    background: #F0E4D0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* =========================
+           3. HERO / VILLAGE STORY
+        ========================== */
+
+.hero {
+    position: relative;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #DDB66F;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image:
+        linear-gradient(90deg,
+            rgba(255, 241, 209, 0.97) 0%,
+            rgba(255, 241, 209, 0.90) 34%,
+            rgba(255, 241, 209, 0.45) 58%,
+            rgba(255, 241, 209, 0.05) 100%),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+    animation: revealVillage 1.2s ease-out both;
+}
+
+.hero-content {
+    max-width: 640px;
+    padding-block: 85px;
+    animation: riseIn 0.8s ease-out both;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    border: 1px solid rgba(138, 116, 36, 0.25);
+    border-radius: 30px;
+    background: rgba(255, 250, 239, 0.8);
+    color: var(--mud-brown);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    max-width: 620px;
+    color: var(--old-study);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 5.5vw, 72px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: var(--muddy);
+}
+
+.hero-description {
+    max-width: 500px;
+    margin-top: 22px;
+    color: #493725;
+    font-size: clamp(15px, 1.5vw, 18px);
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn {
+    min-height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--muddy);
+    color: white;
+    box-shadow: 0 8px 18px rgba(164, 49, 8, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--cinnamon);
+    box-shadow: 0 10px 22px rgba(164, 49, 8, 0.25);
+}
+
+.btn-secondary {
+    border-color: rgba(66, 26, 5, 0.25);
+    background: rgba(255, 250, 239, 0.85);
+    color: var(--old-study);
+}
+
+.btn-secondary:hover {
+    background: white;
+}
+
+.hero-note {
+    margin-top: 18px;
+    color: #604C35;
+    font-size: 13px;
+}
+
+/* =========================
+           4. INTRODUCTION
+        ========================== */
+
+.intro-section {
+    padding: 65px 0 35px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    color: var(--old-study);
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+}
+
+.section-heading p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* =========================
+           5. FEATURE CARDS
+        ========================== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 32px rgba(66, 26, 5, 0.13);
+}
+
+.feature-image {
+    height: 175px;
+    overflow: hidden;
+    background: #E7D3AD;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.feature-card:hover .feature-image img {
+    transform: scale(1.06);
+}
+
+.feature-content {
+    padding: 22px 18px 24px;
+}
+
+.feature-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    margin-top: -44px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: var(--banana);
+    font-size: 19px;
+}
+
+.feature-card h3 {
+    color: var(--old-study);
+    font-size: 18px;
+}
+
+.feature-card p {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 17px;
+    color: var(--muddy);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: var(--cinnamon);
+}
+
+/* =========================
+           6. HOW IT WORKS
+        ========================== */
+
+
+/* =========================================
+   GRAMCRAFT — ILLUSTRATED JOURNEY
+========================================= */
+
+.journey-section {
+    position: relative;
+    padding: 100px 0 110px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(ellipse at 10% 15%,
+            rgba(213, 159, 63, 0.18),
+            transparent 35%),
+        radial-gradient(ellipse at 90% 80%,
+            rgba(164, 49, 8, 0.07),
+            transparent 35%),
+        #F5E8CF;
+}
+
+.journey-section .section-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.journey-section .section-heading h2 {
+    color: #421A05;
+    letter-spacing: -1px;
+}
+
+/* Three connected journey scenes */
+.journey-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Decorative line connecting the journey */
+.journey-grid::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+
+    top: 105px;
+    left: 16%;
+    right: 16%;
+
+    border-top: 2px dashed rgba(138, 116, 36, 0.45);
+}
+
+/* Individual scene cards */
+.journey-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 0 0 30px;
+    overflow: hidden;
+
+    background: #FFFAF0;
+    border: 1px solid rgba(138, 116, 36, 0.22);
+    border-radius: 24px;
+
+    box-shadow: 0 10px 30px rgba(66, 26, 5, 0.05);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(207, 104, 17, 0.45);
+
+    box-shadow: 0 22px 42px rgba(66, 26, 5, 0.12);
+}
+
+/* Number badge */
+.journey-number {
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+    margin: 24px 25px 20px;
+
+    border-radius: 15px;
+    background: #421A05;
+    color: #FFF8E7;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow: 0 5px 12px rgba(66, 26, 5, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.journey-card:hover .journey-number {
+    transform: rotate(-5deg) scale(1.06);
+    background: #A43108;
+}
+
+/* Headings and descriptions */
+.journey-card h3 {
+    margin: 0 25px 12px;
+
+    color: #421A05;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.journey-card p {
+    margin: 0 25px;
+
+    color: #746653;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .journey-section {
+        padding: 75px 0;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .journey-grid::before {
+        display: none;
+    }
+
+    .journey-card {
+        padding-bottom: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .journey-section {
+        padding: 60px 0;
+    }
+
+    .journey-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .journey-card {
+        border-radius: 20px;
+    }
+
+    .journey-card h3 {
+        font-size: 19px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .journey-card,
+    .journey-number {
+        transition: none;
+    }
+}
+
+
+.journey-number {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: var(--old-study);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.journey-card h3 {
+    margin-top: 18px;
+    color: var(--old-study);
+    font-size: 20px;
+}
+
+.journey-card p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* =========================
+           7. CALL TO ACTION
+        ========================== */
+
+.cta-section {
+    padding: 75px 0;
+}
+
+.cta-box {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(28px, 5vw, 60px);
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 95% 10%,
+            rgba(213, 159, 63, 0.35),
+            transparent 32%),
+        var(--old-study);
+    color: white;
+}
+
+.cta-box h2 {
+    max-width: 650px;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+}
+
+.cta-box p {
+    max-width: 600px;
+    margin-top: 16px;
+    color: #F0DDC3;
+}
+
+.cta-box .btn {
+    margin-top: 25px;
+    background: var(--banana);
+    color: var(--old-study);
+}
+
+.cta-box .btn:hover {
+    background: var(--cream);
+}
+
+/* =========================
+           8. FOOTER
+        ========================== */
+
+.footer {
+    padding: 35px 0;
+    background: #F0E1C7;
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--old-study);
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--cinnamon);
+}
+
+/* =========================
+           9. TOAST MESSAGE
+        ========================== */
+
+.toast {
+    position: fixed;
+    z-index: 2000;
+    right: 20px;
+    bottom: 20px;
+    width: min(360px, calc(100% - 40px));
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    background: var(--old-study);
+    color: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: 0.25s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+           10. ANIMATIONS
+        ========================== */
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealVillage {
+    from {
+        opacity: 0.6;
+        transform: scale(1.06);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+/* =========================
+           11. TABLET RESPONSIVENESS
+        ========================== */
+
+@media (max-width: 1050px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .brand-name {
+        font-size: 25px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-image {
+        height: 210px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+}
+
+/* =========================
+           12. MOBILE NAVIGATION
+        ========================== */
+
+@media (max-width: 760px) {
+    .container {
+        width: min(100% - 32px, 600px);
+    }
+
+    .nav-inner {
+        min-height: 72px;
+        gap: 12px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 23px;
+    }
+
+    .brand-name {
+        font-size: 23px;
+    }
+
+    .brand-tagline {
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        display: grid;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 22px 22px;
+        border-bottom: 1px solid var(--border);
+        background: var(--background);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links a {
+        padding: 13px 8px;
+        border-bottom: 1px solid var(--border);
+        font-size: 16px;
+    }
+
+    .nav-actions {
+        gap: 4px;
+    }
+
+    .language-select {
+        width: 96px;
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
+    .nav-actions .icon-button {
+        width: 36px;
+        height: 36px;
+        font-size: 19px;
+    }
+
+    .hero {
+        min-height: 590px;
+        align-items: flex-start;
+    }
+
+    .hero-background {
+        background-image:
+            linear-gradient(180deg,
+                rgba(255, 241, 209, 0.96) 0%,
+                rgba(255, 241, 209, 0.91) 48%,
+                rgba(255, 241, 209, 0.18) 100%),
+            url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80");
+
+        background-position: center;
+    }
+
+    .hero-content {
+        padding-top: 65px;
+        padding-bottom: 210px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 9vw, 58px);
+        letter-spacing: -0.8px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 340px;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .intro-section {
+        padding-top: 50px;
+    }
+
+    .features {
+        gap: 14px;
+    }
+
+    .feature-image {
+        height: 155px;
+    }
+
+    .feature-content {
+        padding: 19px 14px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+
+    .journey-section,
+    .cta-section {
+        padding: 52px 0;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-card {
+        padding: 23px;
+    }
+
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* =========================
+           13. SMALL MOBILE SCREENS
+        ========================== */
+
+@media (max-width: 390px) {
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 20px;
+    }
+
+    .brand-tagline {
+        font-size: 9px;
+    }
+
+    .language-select {
+        width: 82px;
+        font-size: 11px;
+    }
+
+    .nav-actions .icon-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: 210px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+}
+
+/* =========================
+           14. REDUCED MOTION
+        ========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+
+/* =====================================
+   GRAMCRAFT: WARMTH & LOVE
+===================================== */
+
+:root {
+    --love-cream: #FFF4E3;
+    --love-peach: #F5D2B5;
+    --love-pink: #D98B76;
+    --love-gold: #E8B85D;
+}
+
+/* Warmer background */
+
+body {
+    background:
+        radial-gradient(circle at 10% 10%,
+            rgba(232, 184, 93, 0.10),
+            transparent 30%),
+        var(--love-cream);
+
+    color: var(--old-study);
+}
+
+/* A softer, warmer navigation bar */
+
+.navbar {
+    background: rgba(255, 248, 235, 0.94);
+    border-bottom: 1px solid rgba(164, 49, 8, 0.10);
+}
+
+/* Make the village welcome section feel magical */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-background {
+    filter: saturate(1.08);
+
+    animation: villageReveal 1.5s ease-out both;
+}
+
+.hero-content {
+    animation: welcomeReveal 1s ease-out both;
+}
+
+/* Handcrafted label above the main heading */
+
+.eyebrow {
+    background: rgba(255, 248, 235, 0.92);
+    border-color: rgba(207, 104, 17, 0.28);
+    color: var(--muddy);
+    box-shadow: 0 4px 16px rgba(66, 26, 5, 0.05);
+}
+
+/* More personality in the main heading */
+
+.hero h1 {
+    letter-spacing: -1.5px;
+    text-wrap: balance;
+}
+
+.hero h1 span {
+    color: var(--muddy);
+    text-decoration-color: var(--love-gold);
+}
+
+/* Warmer buttons */
+
+.btn-primary {
+    background: linear-gradient(135deg,
+            #A43108,
+            #C84D16);
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 8px 20px rgba(164, 49, 8, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg,
+            #C84D16,
+            #D97828);
+
+    transform: translateY(-3px);
+}
+
+/* Make feature cards feel softer */
+
+.feature-card {
+    position: relative;
+    border: 1px solid rgba(164, 49, 8, 0.09);
+    border-radius: 24px;
+
+    background: linear-gradient(160deg,
+            #FFFEFA,
+            #FFF2DE);
+
+    box-shadow: 0 8px 24px rgba(66, 26, 5, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(66, 26, 5, 0.12);
+}
+
+/* Give icons a warm handcrafted appearance */
+
+.feature-icon {
+    background: var(--love-gold);
+    box-shadow: 0 3px 10px rgba(66, 26, 5, 0.10);
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    background: #EBC18B;
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    background: #C8BB80;
+}
+
+.feature-card:nth-child(4) .feature-icon {
+    background: #E9B0A0;
+}
+
+/* Friendlier headings */
+
+.section-heading h2,
+.journey-card h3,
+.feature-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* A little warmth in the journey section */
+
+.journey-section {
+    background:
+        radial-gradient(circle at 90% 10%,
+            rgba(232, 184, 93, 0.16),
+            transparent 30%),
+        #F8EBD6;
+}
+
+.journey-card {
+    border-color: rgba(164, 49, 8, 0.12);
+    border-radius: 24px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+    background: #FFFCF5;
+}
+
+/* Gentle decorative hearts */
+
+.love-note {
+    position: absolute;
+    z-index: 1;
+
+    color: var(--muddy);
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+
+    pointer-events: none;
+    animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.love-note-one {
+    top: 14%;
+    right: 8%;
+    transform: rotate(7deg);
+}
+
+.love-note-two {
+    bottom: 12%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+/* Softer call-to-action section */
+
+.cta-box {
+    border: 1px solid rgba(232, 184, 93, 0.25);
+
+    background:
+        radial-gradient(circle at 90% 15%,
+            rgba(232, 184, 93, 0.24),
+            transparent 35%),
+        linear-gradient(135deg,
+            #421A05,
+            #65320F);
+}
+
+/* Footer feels warm instead of plain */
+
+.footer {
+    background: #F3E2C7;
+    border-top: 1px solid #E7D0AE;
+}
+
+/* Animations */
+
+@keyframes welcomeReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes villageReveal {
+    from {
+        opacity: 0.65;
+        transform: scale(1.06);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -7px;
+    }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 760px) {
+    .love-note {
+        display: none;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .feature-card:hover,
+    .journey-card:hover {
+        transform: none;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .love-note,
+    .hero-content,
+    .hero-background {
+        animation: none !important;
+    }
+}
+
+
+/* ===== GRAMCRAFT: WARM & INTERACTIVE TOUCHES ===== */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* A warmer, softer feel across the page */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons feel more alive */
+button,
+.btn,
+a.button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+a.button:hover {
+    transform: translateY(-3px);
+}
+
+/* Cards gently lift when users explore them */
+.card,
+.feature-card,
+.product-card,
+.service-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover,
+.feature-card:hover,
+.product-card:hover,
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(66, 26, 5, 0.12);
+}
+
+/* Images become a little more lively */
+.card img,
+.feature-card img,
+.product-card img,
+.service-card img {
+    transition: transform 0.45s ease;
+}
+
+.card:hover img,
+.feature-card:hover img,
+.product-card:hover img,
+.service-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Friendly text selection */
+::selection {
+    background: #EBD48F;
+    color: #421A05;
+}
+
+/* Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ========================================
+   GRAMCRAFT — PREMIUM CARD EXPERIENCE
+   Hero section remains unchanged.
+======================================== */
+
+/* Section spacing */
+.intro-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.intro-section .section-heading {
+    max-width: 760px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.intro-section .section-heading h2 {
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+}
+
+/* Premium responsive card grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Main card */
+.feature-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    isolation: isolate;
+
+    background: #fffaf0;
+    border: 1px solid rgba(138, 116, 36, 0.18);
+    border-radius: 22px;
+
+    box-shadow:
+        0 5px 16px rgba(66, 26, 5, 0.04),
+        0 18px 40px rgba(66, 26, 5, 0.05);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Decorative glow */
+.feature-card::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 18px;
+    right: 18px;
+    height: 3px;
+
+    background: linear-gradient(90deg,
+            #8A7424,
+            #D59F3F,
+            #CF6811);
+
+    border-radius: 0 0 8px 8px;
+    opacity: 0.65;
+    transition: opacity 0.3s ease;
+}
+
+/* Card interaction */
+.feature-card:hover {
+    transform: translateY(-9px);
+    border-color: rgba(207, 104, 17, 0.4);
+
+    box-shadow:
+        0 12px 25px rgba(66, 26, 5, 0.08),
+        0 28px 55px rgba(66, 26, 5, 0.12);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Photography */
+.feature-image {
+    position: relative;
+    height: 235px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #EBD48F;
+}
+
+/* Gentle image overlay */
+.feature-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(180deg,
+            transparent 55%,
+            rgba(66, 26, 5, 0.20));
+
+    pointer-events: none;
+}
+
+.feature-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.5s ease;
+}
+
+.feature-card:hover .feature-image img {
+    transform: scale(1.075);
+    filter: saturate(1.08);
+}
+
+/* Card content */
+.feature-content {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 25px 23px 26px;
+}
+
+/* Refined icon badge */
+.feature-icon {
+    display: grid;
+    place-items: center;
+
+    width: 49px;
+    height: 49px;
+    margin-top: -49px;
+    margin-bottom: 19px;
+
+    position: relative;
+    z-index: 3;
+
+    background: #FFF8E7;
+    border: 1px solid rgba(138, 116, 36, 0.20);
+    border-radius: 15px;
+
+    font-size: 23px;
+
+    box-shadow: 0 5px 16px rgba(66, 26, 5, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: translateY(-3px) rotate(-4deg);
+    background: #EBD48F;
+}
+
+/* Headings */
+.feature-content h3 {
+    margin: 0 0 11px;
+    color: #421A05;
+
+    font-size: 21px;
+    line-height: 1.3;
+    letter-spacing: -0.45px;
+}
+
+/* Descriptions */
+.feature-content p {
+    margin: 0 0 22px;
+    color: #746653;
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Premium text link */
+.feature-content .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: auto;
+    padding: 9px 0 4px;
+
+    color: #8A7424;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.feature-content .text-link:hover {
+    color: #A43108;
+    gap: 15px;
+}
+
+.feature-content .text-link span {
+    font-size: 19px;
+    transition: transform 0.25s ease;
+}
+
+.feature-content .text-link:hover span {
+    transform: translateX(2px);
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .feature-image {
+        height: 260px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .intro-section {
+        padding: 68px 0;
+    }
+
+    .intro-section .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .intro-section .section-heading h2 {
+        font-size: clamp(26px, 7vw, 34px);
+        letter-spacing: -0.7px;
+    }
+
+    .features {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .feature-card {
+        border-radius: 20px;
+    }
+
+    .feature-image {
+        height: 240px;
+    }
+
+    .feature-content {
+        padding: 24px 22px 25px;
+    }
+
+    .feature-content h3 {
+        font-size: 21px;
+    }
+}
+
+/* Touch devices: don't rely on hover */
+@media (hover: none) {
+    .feature-card:hover {
+        transform: none;
+    }
+
+    .feature-card:hover .feature-image img {
+        transform: none;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .feature-card,
+    .feature-image img,
+    .feature-icon,
+    .feature-content .text-link,
+    .feature-content .text-link span {
+        transition: none;
+    }
+}
+
+
+
+
+/* TEMPORARY TEST — remove after checking */
+.intro-section .feature-card {
+    background: #FFF1CC !important;
+    border: 3px solid #CF6811 !important;
+    border-radius: 28px !important;
+}
+
+.intro-section .feature-image {
+    height: 300px !important;
+}
+
+
+/* ============================================
+   GRAMCRAFT — ILLUSTRATED VILLAGE JOURNEY
+   Hero section remains untouched.
+============================================ */
+
+.journey-section {
+    position: relative;
+    padding: 100px 0 70px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 5% 15%, rgba(213, 159, 63, .20), transparent 35%),
+        radial-gradient(ellipse at 95% 75%, rgba(164, 49, 8, .09), transparent 32%),
+        #F5E8CF;
+}
+
+.journey-section .section-heading {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.journey-section .section-heading .eyebrow {
+    display: inline-block; 
+    padding: 10px 17px;
+    margin-bottom: 16px;
+    background: #FFF8E9;
+    border: 1px solid rgba(138, 116, 36, .24);
+    border-radius: 100px;
+    color: #A43108;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.journey-section .section-heading h2 {
+    margin-bottom: 15px;
+    color: #421A05;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.3px;
+}
+
+.journey-section .section-heading p {
+    color: #746653;
+    line-height: 1.8;
+}
+
+/* Three illustrated scenes */
+
+.story-journey {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: start;
+}
+
+/* Individual story */
+
+.story-step {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: #FFFAF0;
+    border: 1px solid rgba(138, 116, 36, .23);
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(66, 26, 5, .06);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.story-step:nth-child(1) {
+    transform: translateY(0);
+}
+
+.story-step:nth-child(3) {
+    transform: translateY(38px);
+}
+
+.story-step:nth-child(5) {
+    transform: translateY(12px);
+}
+
+.story-step:hover {
+    transform: translateY(-8px);
+    border-color: rgba(207, 104, 17, .5);
+    box-shadow: 0 22px 45px rgba(66, 26, 5, .13);
+}
+
+/* Illustration area */
+
+.story-art {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 420 / 290;
+    isolation: isolate;
+}
+
+.story-art>svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .65s cubic-bezier(.2, .7, .2, 1);
+}
+
+.story-step:hover .story-art>svg {
+    transform: scale(1.045);
+}
+
+/* Subtle art texture */
+
+.story-art::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+            rgba(255, 250, 240, .12),
+            transparent 35%,
+            rgba(66, 26, 5, .07));
+}
+
+/* Scene label */
+
+.art-label {
+    position: absolute;
+    z-index: 3;
+    top: 16px;
+    left: 16px;
+    padding: 8px 11px;
+    border: 1px solid rgba(66, 26, 5, .12);
+    border-radius: 7px;
+    background: rgba(255, 250, 240, .92);
+    color: #5C5011;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+/* Number seal */
+
+.scene-number {
+    position: absolute;
+    z-index: 3;
+    right: 17px;
+    bottom: 16px;
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid rgba(255, 250, 240, .9);
+    border-radius: 50%;
+    background: #421A05;
+    color: #FFF8E9;
+    font-size: 15px;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(66, 26, 5, .18);
+    transition: transform .3s ease, background .3s ease;
+}
+
+.story-step:hover .scene-number {
+    transform: rotate(-8deg) scale(1.08);
+    background: #A43108;
+}
+
+/* Text area */
+
+.story-copy {
+    padding: 25px 25px 30px;
+}
+
+.story-kicker {
+    display: block;
+    margin-bottom: 12px;
+    color: #8A7424;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.story-copy h3 {
+    margin: 0 0 12px;
+    color: #421A05;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.story-copy p {
+    margin: 0;
+    color: #746653;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Winding decorative connectors */
+
+.story-connector {
+    display: none;
+}
+
+/* Closing line */
+
+.journey-footer-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    margin-top: 85px;
+    color: #8A7424;
+    text-align: center;
+}
+
+.journey-footer-note p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.journey-footer-line {
+    width: 45px;
+    height: 1px;
+    background: #D59F3F;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .journey-section {
+        padding: 75px 0 60px;
+    }
+
+    .story-journey {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .story-step:nth-child(1),
+    .story-step:nth-child(3),
+    .story-step:nth-child(5) {
+        transform: none;
+    }
+
+    .story-step:hover {
+        transform: translateY(-5px);
+    }
+
+    .story-copy {
+        padding: 22px;
+    }
+
+    .journey-footer-note {
+        margin-top: 45px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .journey-section {
+        padding: 60px 0 45px;
+    }
+
+    .journey-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .journey-section .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .story-journey {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .story-step:nth-child(1),
+    .story-step:nth-child(3),
+    .story-step:nth-child(5) {
+        transform: none;
+    }
+
+    .story-step:hover {
+        transform: translateY(-4px);
+    }
+
+    .story-art {
+        aspect-ratio: 420 / 260;
+    }
+
+    .story-copy {
+        padding: 22px 21px 25px;
+    }
+
+    .story-copy h3 {
+        font-size: 20px;
+    }
+
+    .journey-footer-note {
+        gap: 10px;
+        margin-top: 38px;
+    }
+
+    .journey-footer-note p {
+        font-size: 15px;
+    }
+
+    .journey-footer-line {
+        width: 22px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .story-step,
+    .story-art>svg,
+    .scene-number {
+        transition: none;
+    }
+}

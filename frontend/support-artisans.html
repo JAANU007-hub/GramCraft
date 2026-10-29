@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Artisans | GramCraft</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf7f0;
+            color: #342b24;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #fff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee4d8;
+        }
+
+        .brand {
+            color: #53734b;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header a:last-child {
+            color: #53734b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px 60px;
+            background: #e9eddf;
+        }
+
+        .eyebrow {
+            color: #53734b;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.2;
+            margin: 18px auto;
+            max-width: 750px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #63594e;
+            font-size: 17px;
+        }
+
+        .section {
+            max-width: 1050px;
+            margin: auto;
+            padding: 55px 22px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: #71675c;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 28px 23px;
+            border: 1px solid #eee4d8;
+            border-radius: 14px;
+        }
+
+        .card-number {
+            color: #78916b;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #71675c;
+            font-size: 15px;
+        }
+
+        .message {
+            background: #53734b;
+            color: #fff;
+            text-align: center;
+            padding: 50px 22px;
+        }
+
+        .message h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .message p {
+            max-width: 650px;
+            margin: auto;
+            color: #f0f3eb;
+        }
+
+        .actions {
+            text-align: center;
+            padding: 40px 20px 55px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 13px 25px;
+            background: #53734b;
+            color: #fff;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #405b39;
+        }
+
+        footer {
+            background: #fff;
+            text-align: center;
+            padding: 20px;
+            color: #71675c;
+            font-size: 13px;
+            border-top: 1px solid #eee4d8;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 16px 5%;
+            }
+
+            .hero {
+                padding: 55px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+    <a href="index.html" class="brand">GramCraft</a>
+    <a href="index.html" id="backLink">← Back to Marketplace</a>
+
+<label for="languageSelect" id="languageLabel">Language:</label>
+<select id="languageSelect" aria-label="Choose language">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+    <option value="mr">मराठी</option>
+</select>
+
+</header>
+
+
+    <main>
+
+        <section class="hero">
+            <span class="eyebrow">Crafted with care, rooted in tradition</span>
+
+            <h1>Every Handmade Product Has a Story.</h1>
+
+            <p>
+                Behind every handmade creation is an artisan's time,
+                creativity and skill. GramCraft connects rural artisans
+                with customers who appreciate the value of handmade work.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Why Support Our Artisans?</h2>
+
+            <p class="section-intro">
+                Choosing handmade products is a way to appreciate
+                traditional skills and help create opportunities for
+                artisan communities.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <span class="card-number">01 / LIVELIHOODS</span>
+                    <h3>Support Artisan Livelihoods</h3>
+                    <p>
+                        Every purchase can help create income opportunities
+                        for the people who make these products.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">02 / HERITAGE</span>
+                    <h3>Keep Traditions Alive</h3>
+                    <p>
+                        Handmade crafts carry local knowledge, creativity
+                        and skills that deserve to be valued and preserved.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">03 / COMMUNITY</span>
+                    <h3>Build Rural Opportunities</h3>
+                    <p>
+                        Connecting artisans with more customers can help
+                        their work reach beyond their local communities.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="message">
+            <h2>Small Choices. Meaningful Impact.</h2>
+
+            <p>
+                When you choose a handmade product, you choose creativity,
+                craftsmanship and the people behind the work.
+                Thank you for being part of a more connected marketplace.
+            </p>
+        </section>
+
+        <section class="actions">
+            <h2>Discover Something Handmade</h2>
+
+            <p>
+                Explore unique creations and find something made with care.
+            </p>
+
+            <a href="index.html" class="button">Explore the Marketplace</a>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 GramCraft · Celebrating rural craftsmanship
+    </footer>
+
+    <script src="support-artisans.js"></script>
+</body>
+</html>
